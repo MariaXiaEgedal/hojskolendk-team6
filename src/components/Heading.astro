@@ -1,0 +1,22 @@
+---
+const {
+  htmlheading = "h2",
+  size = "medium",
+  font = "inter",
+  stylingclasses = "",
+} = Astro.props;
+const Htmlheading = htmlheading;
+
+const sizeClasses = {
+  large: "text-[80px] md:text-[120px] ",
+  medium: "text-[30px] md:text-[60px]",
+  small: "text-[25px] md:text-[40px]",
+  xsmall: "text-[20px] md:text-[35px]",
+};
+
+const fontClass = size === "xsmall" ? "font-sans" : "font-inter";
+---
+
+<Htmlheading class:list={[sizeClasses[size], fontClass, stylingclasses]}>
+  <slot />
+</Htmlheading>

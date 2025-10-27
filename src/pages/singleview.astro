@@ -1,0 +1,39 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import TripIntro from "../components/TripIntro.astro";
+import DatesPrices from "../components/DatesPrices.astro";
+import TripProgram from "../components/TripProgram.astro";
+import WhatsIncluded from "../components/WhatsIncluded.astro";
+import Sustainability from "../components/Sustainability.astro";
+import Heading from "../components/Heading.astro";
+---
+
+<MainLayout title="Single View">
+  <!-- /*************************************************/ TRIP INTRO /*************************************************/ -->
+  <section id="trip-intro" class="bg-orange-200">
+    <Heading>Udforsk Asien i 2 måneder</Heading>
+    <TripIntro />
+  </section>
+
+  <!-- /*************************************************/ DATES & PRICES /*************************************************/ -->
+  <section id="dates-prices" class="bg-yellow-100">
+    <Heading>Tider & Priser</Heading>
+    <DatesPrices />
+  </section>
+
+  <!-- /*************************************************/ TRIP PROGRAM /*************************************************/ -->
+  <section id="trip-program" class="bg-green-100">
+    <Heading>Rejseprogram</Heading>
+    <TripProgram />
+  </section>
+
+  <!-- /*************************************************/ WHAT'S INCLUDED /*************************************************/ -->
+  <section id="whats-included" class="bg-blue-100">
+    <WhatsIncluded />
+  </section>
+
+  <!-- /*************************************************/ SUSTAINABILITY /*************************************************/ -->
+  <section id="sustainability" class="bg-red-100">
+    <Sustainability />
+  </section>
+</MainLayout>
