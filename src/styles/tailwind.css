@@ -28,12 +28,6 @@
 }
 
 @layer base {
-  :root {
-    /* FARVER */
-    --color-brand: #ff5900;
-    --color-brand-black: #000000;
-    --color-brand-white: #ffffff;
-  }
   *,
   ::after,
   ::before,
@@ -46,5 +40,10 @@
   }
 
   @layer utilities {
+    .menu-signup-btn:hover {
+      background-color: #fff !important;
+      color: #ff5900 !important;
+      border-color: #fff !important;
+    }
   }
 }

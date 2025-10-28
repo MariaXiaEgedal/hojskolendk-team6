@@ -4,8 +4,9 @@ const { teksttype = "brødtekst", stylingclasses = "" } = Astro.props;
 
 //Definer den styling (Tailwind classes), der gør sig gældende for de forskellige størrelser.
 const sizeClasses = {
-  brødtekst: "text-[18px] md:text-[20px]",
-  fedbrødtekst: "text-[18px] md:text-[20px] font-bold",
+  brødtekst: "text-[18px] md:text-[20px] font-krub",
+  fedbrødtekst: "text-[18px] md:text-[20px] font-bold font-krub",
+  body: "font-krub text-base", // Tilføj fontfamilien her
 };
 ---
 

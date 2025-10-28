@@ -1,5 +1,162 @@
 ---
+import Text from "./Text.astro";
 ---
-<div>
-Header - tilføj navigation mm.
-</div>
+
+<header class="flex items-center py-5 px-8 relative">
+  <img
+    id="logoOrange"
+    src="/img/logo.svg"
+    alt="Højskolendk logo"
+    class="h-20 z-20"
+  />
+  <img
+    id="logoWhite"
+    src="/img/logo-hvid.svg"
+    alt="Højskolendk logo hvid"
+    class="h-20 z-40 hidden"
+  />
+  <div class="flex items-center gap-12 ml-auto">
+    <!-- Desktop navigation -->
+    <nav class="hidden lg:flex gap-12">
+      <a href="#"
+        ><Text teksttype="fedbrødtekst" stylingclasses="hover:text-primary"
+          >HØJSKOLEOPHOLD</Text
+        ></a
+      >
+      <a href="#"
+        ><Text teksttype="fedbrødtekst" stylingclasses="hover:text-primary"
+          >SOMMERHØJSKOLE</Text
+        ></a
+      >
+      <a href="#"
+        ><Text teksttype="fedbrødtekst" stylingclasses="hover:text-primary"
+          >OM OS</Text
+        ></a
+      >
+      <a href="#"
+        ><Text teksttype="fedbrødtekst" stylingclasses="hover:text-primary"
+          >INFOMØDER</Text
+        ></a
+      >
+    </nav>
+    <a
+      href="#"
+      class="hidden lg:inline-block border-2 border-primary rounded-full px-5 py-2 text-primary hover:text-white font-bold text-xl hover:bg-primary transition"
+      >TILMELD</a
+    >
+    <!-- Burger menu button -->
+    <button
+      id="burgerBtn"
+      class="lg:hidden ml-4 z-30"
+      aria-label="Menu"
+      data-state="closed"
+    >
+      <svg
+        id="burgerIcon"
+        width="32"
+        height="32"
+        fill="none"
+        viewBox="0 0 24 24"
+        stroke="currentColor"
+        class="text-primary transition-colors duration-300"
+      >
+        <path
+          id="burgerPath"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          stroke-width="2"
+          d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </div>
+
+  <!-- Mobile menu -->
+  <div
+    id="mobileMenu"
+    class="fixed inset-0 bg-primary flex flex-col items-center justify-center gap-8 z-20 transition-transform duration-300 translate-x-full lg:hidden"
+  >
+    <nav
+      class="flex flex-col gap-8 text-2xl justify-center items-center text-center"
+    >
+      <a href="#" class="text-white hover:underline">
+        <Text teksttype="fedbrødtekst" stylingclasses="text-white"
+          >HØJSKOLEOPHOLD</Text
+        >
+      </a>
+      <a href="#" class="text-white hover:underline">
+        <Text teksttype="fedbrødtekst" stylingclasses="text-white"
+          >SOMMERHØJSKOLE</Text
+        >
+      </a>
+      <a href="#" class="text-white hover:underline">
+        <Text teksttype="fedbrødtekst" stylingclasses="text-white">OM OS</Text>
+      </a>
+      <a href="#" class="text-white hover:underline">
+        <Text teksttype="fedbrødtekst" stylingclasses="text-white"
+          >INFOMØDER</Text
+        >
+      </a>
+    </nav>
+    <a
+      href="#"
+      class="menu-signup-btn border-2 border-white rounded-full px-6 py-2 text-center"
+      ><Text
+        teksttype="fedbrødtekst"
+        stylingclasses="text-white hover:text-primary">TILMELD</Text
+      ></a
+    >
+
+    <script>
+      const burgerBtn = document.getElementById("burgerBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const burgerPath = document.getElementById("burgerPath");
+      let menuOpen = false;
+      burgerBtn?.addEventListener("click", () => {
+        menuOpen = !menuOpen;
+        const burgerIcon = document.getElementById("burgerIcon");
+        const logoOrange = document.getElementById("logoOrange");
+        const logoWhite = document.getElementById("logoWhite");
+        if (menuOpen) {
+          mobileMenu.classList.remove("translate-x-full");
+          mobileMenu.classList.add("translate-x-0");
+          // Skift til kryds og hvid farve
+          burgerPath.setAttribute("d", "M6 18L18 6M6 6l12 12");
+          burgerPath.setAttribute("stroke-width", "2");
+          burgerIcon.classList.remove("text-primary");
+          burgerIcon.classList.add("text-white");
+          logoOrange.classList.add("hidden");
+          logoWhite.classList.remove("hidden");
+          document.body.classList.add("overflow-hidden");
+        } else {
+          mobileMenu.classList.remove("translate-x-0");
+          mobileMenu.classList.add("translate-x-full");
+          // Skift til burger og orange farve
+          burgerPath.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+          burgerPath.setAttribute("stroke-width", "2");
+          burgerIcon.classList.remove("text-white");
+          burgerIcon.classList.add("text-primary");
+          logoOrange.classList.remove("hidden");
+          logoWhite.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        }
+      });
+      // Luk menuen hvis man klikker på et link i menuen
+      mobileMenu.querySelectorAll("a").forEach((link) => {
+        link.addEventListener("click", () => {
+          menuOpen = false;
+          mobileMenu.classList.remove("translate-x-0");
+          mobileMenu.classList.add("translate-x-full");
+          burgerPath.setAttribute("d", "M4 6h16M4 12h16M4 18h16");
+          const burgerIcon = document.getElementById("burgerIcon");
+          burgerIcon.classList.remove("text-white");
+          burgerIcon.classList.add("text-primary");
+          const logoOrange = document.getElementById("logoOrange");
+          const logoWhite = document.getElementById("logoWhite");
+          logoOrange.classList.remove("hidden");
+          logoWhite.classList.add("hidden");
+          document.body.classList.remove("overflow-hidden");
+        });
+      });
+    </script>
+  </div>
+</header>

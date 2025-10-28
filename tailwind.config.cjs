@@ -8,7 +8,13 @@ module.exports = {
         krub: ['Krub', 'sans-serif'],
         inter: ['Inter', 'sans-serif'],
       },
+      colors: {
+        primary: '#ff5900', // 🟠 Din specialfarve
+      },
     },
   },
-  plugins: [require('@tailwindcss/typography'), require('@tailwindcss/forms')],
+  plugins: [
+    require('@tailwindcss/typography'),
+    require('@tailwindcss/forms'),
+  ],
 };
