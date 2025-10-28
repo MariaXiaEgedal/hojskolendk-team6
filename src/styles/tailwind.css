@@ -1,15 +1,39 @@
-@import 'tailwindcss';
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
-@plugin '@tailwindcss/typography';
-@plugin '@tailwindcss/forms';
-@import "tailwindcss-animated";
-@import "tailwindcss-intersect";
+/* FONTS */
+@font-face {
+  font-family: "Lalezar";
+  src: url("/font/Lalezar-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
 
-@theme {
-  /* Her tilføjes theme variable // tokens */
+@font-face {
+  font-family: "Krub";
+  src: url("/font/Krub-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Krub";
+  src: url("/font/Krub-Bold.ttf") format("truetype");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
 }
 
 @layer base {
+  :root {
+    /* FARVER */
+    --color-brand: #ff5900;
+    --color-brand-black: #000000;
+    --color-brand-white: #ffffff;
+  }
   *,
   ::after,
   ::before,
@@ -17,11 +41,10 @@
   ::file-selector-button {
     border-color: var(--color-gray-200, currentColor);
   }
-}
 
-@layer components{
+  @layer components {
+  }
 
-}
-@layer utilities{
-  
+  @layer utilities {
+  }
 }

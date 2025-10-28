@@ -2,19 +2,37 @@
 const {
   htmlheading = "h2",
   size = "medium",
-  font = "inter",
+  font = undefined,
   stylingclasses = "",
 } = Astro.props;
 const Htmlheading = htmlheading;
 
 const sizeClasses = {
-  large: "text-[80px] md:text-[120px] ",
+  large: "text-[40px] md:text-[100px]",
   medium: "text-[30px] md:text-[60px]",
-  small: "text-[25px] md:text-[40px]",
-  xsmall: "text-[20px] md:text-[35px]",
+  small: "text-[20px] md:text-[30px]",
+  xsmall: "text-[18px] md:text-[25px]",
 };
 
-const fontClass = size === "xsmall" ? "font-sans" : "font-inter";
+const defaultFontForSize = {
+  large: "font-lalezar",
+  medium: "font-lalezar",
+  small: "font-krub font-bold",
+  xsmall: "font-krub font-bold",
+};
+
+/* If a `font` prop is provided, prefer that. Accepts 'lalezar', 'krub', 'inter'.
+   Otherwise fall back to defaults derived from size. */
+let fontClass;
+if (font === "lalezar") {
+  fontClass = "font-lalezar";
+} else if (font === "krub") {
+  fontClass = "font-krub";
+} else if (font === "inter") {
+  fontClass = "font-inter";
+} else {
+  fontClass = defaultFontForSize[size] || "font-inter";
+}
 ---
 
 <Htmlheading class:list={[sizeClasses[size], fontClass, stylingclasses]}>

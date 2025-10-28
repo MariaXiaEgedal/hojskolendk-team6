@@ -14,6 +14,7 @@ import SocialFeed from "../components/SocialFeed.astro";
 import Sustainability from "../components/Sustainability.astro";
 import SignupForm from "../components/SignupForm.astro";
 import Heading from "../components/Heading.astro";
+import Text from "../components/Text.astro";
 ---
 
 <MainLayout title="Højskolendk-team6">
@@ -31,6 +32,28 @@ import Heading from "../components/Heading.astro";
   <!-- Jeg har bare sat en bagundsfarve på hver sektion så vi kan se hvor sektionerne er. De skal slettes senere -->
   <!-- Der skal som sådan ikke kodes inde i index.astro (forsiden), men kun i de enkelte komponenter -->
   <!-- Hvis der er brug for flere komponeneter inde i det "rigtige" komponent, så kan i bare lave flere -->
+
+  <!-- /*************************************************/ TYPOGRAPHY EXAMPLES /*************************************************/ -->
+  <section class="py-12 px-6 max-w-5xl mx-auto">
+    <!-- H1 -->
+    <Heading htmlheading="h1" size="large">Dette er et eksempel på H1</Heading>
+
+    <!-- H2  -->
+    <Heading htmlheading="h2" size="medium">Dette er et eksempel på H2</Heading>
+
+    <!-- H3 -->
+    <Heading htmlheading="h3" size="small">Dette er et eksempel på H3</Heading>
+
+    <!-- H4 -->
+    <Heading htmlheading="h4" size="xsmall">Dette er et eksempel på H4</Heading>
+
+    <!-- Brødtekst -->
+    <div class="mt-6 space-y-3">
+      <Text teksttype="brødtekst">Dette er et eksempel på brødtext.</Text>
+      <Text teksttype="fedbrødtekst">Dette er et eksempel på fed brødtext.</Text
+      >
+    </div>
+  </section>
 
   <!-- /*************************************************/ HERO /*************************************************/ -->
   <section id="hero" class="bg-orange-200">
