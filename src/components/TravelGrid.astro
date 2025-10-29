@@ -1,0 +1,204 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+const imagesTop = [
+  {
+    src: "rejse1.svg",
+    title: "FRA PARADISØER TIL STORBYLYS",
+    subtitle: "MALDIVERNE, SRI LANKA, BALI, GILI ISLANDS, JAPAN & AUSTRALIEN",
+    badge: "3 måneder",
+  },
+  {
+    src: "rejse2.svg",
+    title: "LATINSK LIVSGLÆDE",
+    subtitle: "COSTA RICA, MEXICO & COLOMBIA",
+    badge: "2 måneder",
+  },
+  {
+    src: "rejse3.svg",
+    title: "ASIENS SJÆL",
+    subtitle: "INDIEN, NEPAL, THAILAND, VIETNAM & SRI LANKA",
+    badge: "3 måneder",
+  },
+  {
+    src: "rejse4.svg",
+    title: "VERDENSREJSE I STILLEHAVET",
+    subtitle: "HAWAII, AUSTRALIEN, JAPAN, BALI & GILI ISLANDS",
+    badge: "3 måneder",
+  },
+];
+const imagesBottom = [
+  {
+    src: "rejse5.svg",
+    title: "TROPISK RUNDREJSE",
+    subtitle: "MALDIVERNE, SRI LANKA, BALI & GILI ISLANDS",
+    badge: "2 måneder",
+  },
+  {
+    src: "rejse6.svg",
+    title: "DOWN UNDER & DET FJERNE ØSTEN",
+    subtitle: "AUSTRALIEN, NEW ZEALAND, VIETNAM, BALI, GILI ISLANDS & LOMBOK",
+    badge: "3 måneder",
+  },
+  {
+    src: "rejse7.svg",
+    title: "SYDAMERIKAS MAGI",
+    subtitle: "BRASILIEN, BOLIVIA, COLOMBIA, ECUADOR, PERU & ARGENTINA",
+    badge: "3 måneder",
+  },
+  {
+    src: "rejse8.svg",
+    title: "KONTRASTER & KULTUR",
+    subtitle: "AUSTRALIEN, JAPAN, BALI & GILI ISLANDS",
+    badge: "2 måneder",
+  },
+];
+---
+
+<!-- Øverste sektion -->
+<div class="grid grid-cols-2 gap-8 mx-[130px] max-sm:mx-5 mb-12">
+  <div class="flex flex-col gap-8">
+    {
+      [imagesTop[0], imagesTop[2]].map((img) => (
+        <div class="relative group w-full">
+          <img
+            src={`/img/${img.src}`}
+            alt={img.src}
+            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+            <Heading
+              htmlheading="h4"
+              size="xsmall"
+              stylingclasses="text-white drop-shadow"
+            >
+              {img.title}
+            </Heading>
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-white text-sm drop-shadow"
+            >
+              {img.subtitle}
+            </Text>
+            <Text
+              teksttype="fedbrødtekst"
+              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
+            >
+              {img.badge}
+            </Text>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="flex flex-col gap-8">
+    {
+      [imagesTop[1], imagesTop[3]].map((img) => (
+        <div class="relative group w-full">
+          <img
+            src={`/img/${img.src}`}
+            alt={img.src}
+            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+            <Heading
+              htmlheading="h4"
+              size="xsmall"
+              stylingclasses="text-white drop-shadow"
+            >
+              {img.title}
+            </Heading>
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-white text-sm drop-shadow"
+            >
+              {img.subtitle}
+            </Text>
+            <Text
+              teksttype="fedbrødtekst"
+              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
+            >
+              {img.badge}
+            </Text>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
+
+<!-- Nederste sektion -->
+<div class="grid grid-cols-2 gap-8 mx-[130px] max-sm:mx-5">
+  <div class="flex flex-col gap-8">
+    {
+      [imagesBottom[0], imagesBottom[2]].map((img) => (
+        <div class="relative group w-full">
+          <img
+            src={`/img/${img.src}`}
+            alt={img.src}
+            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+            <Heading
+              htmlheading="h4"
+              size="xsmall"
+              stylingclasses="text-white drop-shadow"
+            >
+              {img.title}
+            </Heading>
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-white text-sm drop-shadow"
+            >
+              {img.subtitle}
+            </Text>
+            <Text
+              teksttype="fedbrødtekst"
+              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
+            >
+              {img.badge}
+            </Text>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+  <div class="flex flex-col gap-8">
+    {
+      [imagesBottom[1], imagesBottom[3]].map((img) => (
+        <div class="relative group w-full">
+          <img
+            src={`/img/${img.src}`}
+            alt={img.src}
+            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
+            loading="lazy"
+          />
+          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
+            <Heading
+              htmlheading="h4"
+              size="xsmall"
+              stylingclasses="text-white drop-shadow"
+            >
+              {img.title}
+            </Heading>
+            <Text
+              teksttype="brødtekst"
+              stylingclasses="text-white text-sm drop-shadow"
+            >
+              {img.subtitle}
+            </Text>
+            <Text
+              teksttype="fedbrødtekst"
+              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
+            >
+              {img.badge}
+            </Text>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+</div>
