@@ -2,3 +2,47 @@
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 ---
+
+<div class="relative w-full h-[600px] md:h-[750px] mb-10 bg-white">
+  <video
+    src="/img/hero-film.MP4"
+    autoplay
+    loop
+    muted
+    playsinline
+    class="w-full h-full object-cover"></video>
+  <div class="absolute inset-0 flex flex-col items-center justify-center z-10">
+    <Heading
+      htmlheading="h1"
+      size="large"
+      stylingclasses="text-primary text-center mb-4 drop-shadow-lg"
+    >
+      HØJSKOLE I UDLANDET
+    </Heading>
+    <Text
+      teksttype="fedbrødtekst"
+      stylingclasses="text-primary text-center drop-shadow-lg"
+    >
+      Eventyrlige højskoleophold i udlandet for unge
+    </Text>
+    <a href="#tilmeld" class="block lg:hidden mt-8 mx-auto w-fit">
+      <button
+        class="px-6 py-2 border-2 border-primary rounded-full text-primary hover:text-white hover:bg-primary"
+      >
+        <Text teksttype="fedbrødtekst" stylingclasses=" ">TILMELD</Text>
+      </button>
+    </a>
+  </div>
+  <svg
+    class="absolute -bottom-1 left-0 w-full h-30"
+    viewBox="0 0 1440 130"
+    fill="none"
+    xmlns="http://www.w3.org/2000/svg"
+    style="pointer-events: none;"
+  >
+    <path
+      d="M0,110 C120,90 240,130 360,100 C480,70 600,130 720,100 C840,70 960,130 1080,100 C1200,70 1320,130 1440,110 L1440,130 L0,130 Z"
+      fill="white"
+      fill-opacity="1"></path>
+  </svg>
+</div>
