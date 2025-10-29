@@ -1,0 +1,317 @@
+---
+import Text from "./Text.astro";
+---
+
+<h2 class="text-4xl md:text-5xl font-lalezar text-center mt-8">Program</h2>
+<section class="py-8 mx-5 md:mx-[130px]">
+  <!-- Tab Navigation -->
+  <div class="flex flex-wrap md:flex-nowrap mb-8">
+    <button
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white active"
+      data-tab="introdage"
+    >
+      Introdage
+    </button>
+    <button
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      data-tab="teambuilding"
+    >
+      Teambuilding
+    </button>
+    <button
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      data-tab="rundrejse"
+    >
+      Rundrejse & Eventyr
+    </button>
+    <button
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      data-tab="selvudvikling"
+    >
+      Selvudviklink & Kommunikation
+    </button>
+    <button
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      data-tab="ohop"
+    >
+      Ø-Hop
+    </button>
+    <button
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      data-tab="friuge"
+    >
+      Friuge
+    </button>
+  </div>
+
+  <!-- Tab Content -->
+  <div class="tab-content-container">
+    <!-- Introdage -->
+    <div class="tab-content active" id="introdage">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/3">
+          <img src="/img/introdage.png" alt="Introdage" class="w-full h-auto" />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
+            INTRODAGE
+          </h3>
+          <div class="flex items-center gap-2 text-primary mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-krub text-lg">Dubai/Doha/Bangkok/Singapore</p>
+          </div>
+          <p class="font-krub text-sm md:text-base mb-4">
+            Vi starter vores højskole-eventyr med nogle spændende og sjove
+            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
+            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
+            fællesmiddage, sightseeing, oplevelser og vores helt eget
+            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
+            en sjov og aktiv dag.
+          </p>
+          <p class="font-krub text-sm md:text-base">
+            I forhold til destination for vores introdage, så afhænger det af
+            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
+            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
+            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
+            hvilken by vi lander i.
+          </p>
+          <p class="font-krub text-sm md:text-base mt-4">
+            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
+            kan glæde jer til sand mellem tæerne, masser af sol på huden,
+            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
+            mere sammen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Teambuilding -->
+    <div class="tab-content hidden" id="teambuilding">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/3">
+          <img
+            src="/img/introdage.png"
+            alt="Teambuilding"
+            class="w-full h-auto"
+          />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
+            TEAMBUILDING
+          </h3>
+          <p class="font-krub text-sm md:text-base mb-4">
+            Vi starter vores højskole-eventyr med nogle spændende og sjove
+            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
+            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
+            fællesmiddage, sightseeing, oplevelser og vores helt eget
+            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
+            en sjov og aktiv dag.
+          </p>
+          <p class="font-krub text-sm md:text-base">
+            I forhold til destination for vores introdage, så afhænger det af
+            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
+            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
+            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
+            hvilken by vi lander i.
+          </p>
+          <p class="font-krub text-sm md:text-base mt-4">
+            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
+            kan glæde jer til sand mellem tæerne, masser af sol på huden,
+            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
+            mere sammen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Rundrejse & Eventyr -->
+    <div class="tab-content hidden" id="rundrejse">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/3">
+          <img
+            src="/img/introdage.png"
+            alt="Rundrejse & Eventyr"
+            class="w-full h-auto g"
+          />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
+            RUNDREJSE & EVENTYR
+          </h3>
+          <p class="font-krub text-sm md:text-base mb-4">
+            Vi starter vores højskole-eventyr med nogle spændende og sjove
+            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
+            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
+            fællesmiddage, sightseeing, oplevelser og vores helt eget
+            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
+            en sjov og aktiv dag.
+          </p>
+          <p class="font-krub text-sm md:text-base">
+            I forhold til destination for vores introdage, så afhænger det af
+            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
+            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
+            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
+            hvilken by vi lander i.
+          </p>
+          <p class="font-krub text-sm md:text-base mt-4">
+            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
+            kan glæde jer til sand mellem tæerne, masser af sol på huden,
+            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
+            mere sammen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Selvudvikling & Kommunikation -->
+    <div class="tab-content hidden" id="selvudvikling">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/3">
+          <img
+            src="/img/introdage.png"
+            alt="Selvudvikling & Kommunikation"
+            class="w-full h-auto"
+          />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
+            SELVUDVIKLING & KOMMUNIKATION
+          </h3>
+          <p class="font-krub text-sm md:text-base mb-4">
+            Vi starter vores højskole-eventyr med nogle spændende og sjove
+            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
+            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
+            fællesmiddage, sightseeing, oplevelser og vores helt eget
+            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
+            en sjov og aktiv dag.
+          </p>
+          <p class="font-krub text-sm md:text-base">
+            I forhold til destination for vores introdage, så afhænger det af
+            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
+            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
+            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
+            hvilken by vi lander i.
+          </p>
+          <p class="font-krub text-sm md:text-base mt-4">
+            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
+            kan glæde jer til sand mellem tæerne, masser af sol på huden,
+            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
+            mere sammen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Ø-Hop -->
+    <div class="tab-content hidden" id="ohop">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/3">
+          <img src="/img/introdage.png" alt="Ø-Hop" class="w-full h-auto" />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
+            Ø-HOP
+          </h3>
+          <p class="font-krub text-sm md:text-base mb-4">
+            Vi starter vores højskole-eventyr med nogle spændende og sjove
+            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
+            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
+            fællesmiddage, sightseeing, oplevelser og vores helt eget
+            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
+            en sjov og aktiv dag.
+          </p>
+          <p class="font-krub text-sm md:text-base">
+            I forhold til destination for vores introdage, så afhænger det af
+            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
+            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
+            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
+            hvilken by vi lander i.
+          </p>
+          <p class="font-krub text-sm md:text-base mt-4">
+            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
+            kan glæde jer til sand mellem tæerne, masser af sol på huden,
+            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
+            mere sammen.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Friuge -->
+    <div class="tab-content hidden" id="friuge">
+      <div class="flex flex-col md:flex-row gap-8 items-start">
+        <div class="w-full md:w-1/3">
+          <img src="/img/introdage.png" alt="Friuge" class="w-full h-auto" />
+        </div>
+        <div class="w-full md:w-2/3">
+          <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
+            FRIUGE
+          </h3>
+          <p class="font-krub text-sm md:text-base mb-4">
+            Vi starter vores højskole-eventyr med nogle spændende og sjove
+            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
+            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
+            fællesmiddage, sightseeing, oplevelser og vores helt eget
+            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
+            en sjov og aktiv dag.
+          </p>
+          <p class="font-krub text-sm md:text-base">
+            I forhold til destination for vores introdage, så afhænger det af
+            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
+            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
+            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
+            hvilken by vi lander i.
+          </p>
+          <p class="font-krub text-sm md:text-base mt-4">
+            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
+            kan glæde jer til sand mellem tæerne, masser af sol på huden,
+            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
+            mere sammen.
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Tab functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const tabButtons = document.querySelectorAll(".tab-button");
+    const tabContents = document.querySelectorAll(".tab-content");
+
+    tabButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const tabId = button.getAttribute("data-tab");
+
+        // Remove active class from all buttons
+        tabButtons.forEach((btn) => {
+          btn.classList.remove("active");
+          btn.classList.add("opacity-50");
+        });
+
+        // Add active class to clicked button
+        button.classList.add("active");
+        button.classList.remove("opacity-50");
+
+        // Hide all tab contents
+        tabContents.forEach((content) => {
+          content.classList.remove("active");
+          content.classList.add("hidden");
+        });
+
+        // Show selected tab content
+        const selectedContent = document.getElementById(tabId);
+        if (selectedContent) {
+          selectedContent.classList.remove("hidden");
+          selectedContent.classList.add("active");
+        }
+      });
+    });
+  });
+</script>
