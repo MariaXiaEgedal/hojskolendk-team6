@@ -1,0 +1,204 @@
+---
+import Text from "./Text.astro";
+import Button from "./Button.astro";
+---
+
+<section class="bg-primary/[0.11] py-12 px-5 md:px-[130px] relative">
+  <!-- Back Arrow -->
+  <a
+    href="/"
+    class="absolute left-4 top-8 md:left-8 hover:opacity-80 transition-opacity"
+  >
+    <svg class="w-12 h-12 text-primary" fill="currentColor" viewBox="0 0 24 24">
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+      <path d="M15.41 7.41L14 6l-6 6 6 6 1.41-1.41L10.83 12z"></path>
+    </svg>
+  </a>
+
+  <div class="max-w-7xl mx-auto">
+    <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start">
+      <!-- Left Column: Text Content -->
+      <div class="space-y-6 relative pl-8">
+        <!-- striber -->
+        <div class="absolute left-0 top-0 bottom-0 w-1">
+          <div class="h-full flex flex-col justify-between">
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+            <div class="h-[3%] bg-primary"></div>
+          </div>
+        </div>
+
+        <!-- Main Heading -->
+        <div>
+          <h2 class="text-3xl md:text-4xl font-lalezar mb-1">
+            Udforsk Asien i 2 måneder
+          </h2>
+          <p class="text-lg md:text-xl font-lalezar uppercase">
+            MALDIVERNE, SRI LANKA, BALI & GILI ISLANDS
+          </p>
+        </div>
+
+        <!-- Location 1: INTRODAGE -->
+        <div class="flex gap-3">
+          <div class="flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-lalezar mb-1">
+              INTRODAGE: Doha/Dubai/Bangkok
+            </h3>
+            <Text teksttype="brødtekst">
+              Vi starter med introdage, hvor vi lærer hinanden at kende, inden
+              rejsen for alvor begynder.
+            </Text>
+          </div>
+        </div>
+
+        <!-- Location 2: MALDIVERNE -->
+        <div class="flex gap-3">
+          <div class="flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-lalezar mb-1">MALDIVERNE: Dhiffushi</h3>
+            <Text teksttype="brødtekst">
+              På Maldiverne venter kridhvide strande, turkisblåt vand og
+              snorkling med havskildpadder og farvestrålende tropefisk.
+            </Text>
+          </div>
+        </div>
+
+        <!-- Location 3: SRI LANKA -->
+        <div class="flex gap-3">
+          <div class="flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-lalezar mb-1">
+              SRI LANKA: Dambulla, Kandy, Ella & Weligama
+            </h3>
+            <Text teksttype="brødtekst">
+              På Sri Lanka rejser vi gennem frodige bjerge, besøger teplantager,
+              surfer, bader i vandfald og spotter elefanter i nationalparker.
+            </Text>
+          </div>
+        </div>
+
+        <!-- Location 4: INDONESIEN -->
+        <div class="flex gap-3">
+          <div class="flex-shrink-0">
+            <svg
+              class="w-6 h-6 text-primary"
+              fill="currentColor"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"
+              ></path>
+            </svg>
+          </div>
+          <div>
+            <h3 class="text-lg font-lalezar mb-1">
+              INDONESIEN: Bali & Gili Islands
+            </h3>
+            <Text teksttype="brødtekst">
+              På Bali bor vi tæt på naturen, oplever lokale traditioner og
+              mærker bølgerne på surfboardet. Til sidst sejler vi til Gili
+              Islands, hvor livet leves i barfodstempo med solnedgange, palmer
+              og kokosnødder i hånden.
+            </Text>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Column: Image and Buttons -->
+      <div class="space-y-4">
+        <img
+          id="carousel-image"
+          src="/img/eleverbjerg.svg"
+          alt="Gruppe af elever på bjerg"
+          class="w-full h-auto max-w-md mx-auto transition-opacity duration-500"
+        />
+        <div class="flex flex-col sm:flex-row gap-3 justify-center">
+          <button
+            class="bg-primary text-white font-lalezar text-xl px-5 py-2 rounded-full hover:bg-orange-600 transition-colors uppercase border-2 border-primary"
+          >
+            TILMELD DIG
+          </button>
+          <button
+            class="bg-transparent text-black font-lalezar text-xl px-5 py-2 rounded-full transition-colors uppercase border-2 border-black hover:bg-gray-100"
+          >
+            RESERVER PLADS
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  const images = [
+    "/img/eleverbjerg.svg",
+    "/img/badegruppe.svg",
+    "/img/badehaender.svg",
+    "/img/badebriller.svg",
+    "/img/strand.svg",
+    "/img/bluewater.svg",
+  ];
+
+  let currentIndex = 0;
+  const carouselImage = document.getElementById(
+    "carousel-image"
+  ) as HTMLImageElement;
+
+  function changeImage() {
+    if (carouselImage) {
+      // Change image instantly
+      currentIndex = (currentIndex + 1) % images.length;
+      carouselImage.src = images[currentIndex];
+    }
+  }
+
+  // Start the carousel
+  setInterval(changeImage, 2000);
+</script>

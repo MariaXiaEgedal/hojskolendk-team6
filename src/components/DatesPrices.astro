@@ -1,0 +1,187 @@
+---
+import Text from "./Text.astro";
+---
+
+<section class="py-16 mx-5 md:mx-[130px]">
+  <div>
+    <!-- Heading -->
+    <h2 class="text-4xl md:text-5xl font-lalezar text-center mb-12">
+      Tider & priser
+    </h2>
+
+    <!-- Cards Grid - 2x2 -->
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+      <!-- Card 1 -->
+      <div
+        class="bg-gray-100 rounded-lg overflow-hidden flex flex-col md:flex-row md:h-[200px]"
+      >
+        <img
+          src="/img/badegruppe.svg"
+          alt="Gruppe på badeflåde"
+          class="w-full md:w-[240px] h-32 md:h-full object-cover"
+        />
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-lalezar uppercase mb-2">
+              MALDIVERNE, SRI LANKA, BALI & GILI ISLANDS
+            </h3>
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <p class="font-krub text-sm mb-2">
+                  Afrejse: 07. Jan 2026 <span>Varighed 2 måneder</span>
+                </p>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-2.5 h-2.5 bg-red-500 rounded-full"></span>
+                  <p class="font-krub text-sm">Sidste chance</p>
+                </div>
+                <p class="font-krub font-bold text-sm">Pris ca 52.900 DKK</p>
+              </div>
+              <button
+                class="bg-primary text-white font-lalezar text-base px-6 py-2 rounded-full hover:bg-orange-600 transition-colors uppercase whitespace-nowrap self-start"
+              >
+                BOOK NU
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 font-krub text-sm">
+            <span>Flybillet tur/retur er inkluderet</span>
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 2 -->
+      <div
+        class="bg-gray-100 rounded-lg overflow-hidden flex flex-col md:flex-row md:h-[200px]"
+      >
+        <img
+          src="/img/badebriller.svg"
+          alt="Gruppe på badeflåde"
+          class="w-full md:w-[240px] h-32 md:h-full object-cover"
+        />
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-lalezar uppercase mb-2">
+              MALDIVERNE, SRI LANKA, BALI & GILI ISLANDS
+            </h3>
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <p class="font-krub text-sm mb-2">
+                  Afrejse: Ca 10. Feb 2026 <span>Varighed 2 måneder</span>
+                </p>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-2.5 h-2.5 bg-yellow-400 rounded-full"></span>
+                  <p class="font-krub text-sm">Få pladser</p>
+                </div>
+                <p class="font-krub font-bold text-sm">Pris ca 52.900 DKK</p>
+              </div>
+              <button
+                class="bg-primary text-white font-lalezar text-base px-6 py-2 rounded-full hover:bg-orange-600 transition-colors uppercase whitespace-nowrap self-start"
+              >
+                BOOK NU
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 font-krub text-sm">
+            <span>Flybillet tur/retur er inkluderet</span>
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 3 -->
+      <div
+        class="bg-gray-100 rounded-lg overflow-hidden flex flex-col md:flex-row md:h-[200px]"
+      >
+        <img
+          src="/img/eleverbjerg.svg"
+          alt="Gruppe på badeflåde"
+          class="w-full md:w-[240px] h-32 md:h-full object-cover"
+        />
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-lalezar uppercase mb-2">
+              MALDIVERNE, SRI LANKA, BALI & GILI ISLANDS
+            </h3>
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <p class="font-krub text-sm mb-2">
+                  Afrejse: 25. Feb 2026 <span>Varighed 2 måneder</span>
+                </p>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+                  <p class="font-krub text-sm">Ledige pladser</p>
+                </div>
+                <p class="font-krub font-bold text-sm">Pris ca 52.900 DKK</p>
+              </div>
+              <button
+                class="bg-primary text-white font-lalezar text-base px-6 py-2 rounded-full hover:bg-orange-600 transition-colors uppercase whitespace-nowrap self-start"
+              >
+                BOOK NU
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 font-krub text-sm">
+            <span>Flybillet tur/retur er inkluderet</span>
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+
+      <!-- Card 4 -->
+      <div
+        class="bg-gray-100 rounded-lg overflow-hidden flex flex-col md:flex-row md:h-[200px]"
+      >
+        <img
+          src="/img/bluewater.svg"
+          alt="Gruppe på badeflåde"
+          class="w-full md:w-[240px] h-32 md:h-full object-cover"
+        />
+        <div class="p-4 flex-1 flex flex-col justify-between">
+          <div>
+            <h3 class="text-base font-lalezar uppercase mb-2">
+              MALDIVERNE, SRI LANKA, BALI & GILI ISLANDS
+            </h3>
+            <div class="flex items-start gap-4">
+              <div class="flex-1">
+                <p class="font-krub text-sm mb-2">
+                  Afrejse: Ca 10 Sep 2026 <span>Varighed 2 måneder</span>
+                </p>
+                <div class="flex items-center gap-2 mb-1">
+                  <span class="w-2.5 h-2.5 bg-green-500 rounded-full"></span>
+                  <p class="font-krub text-sm">Ledige pladser</p>
+                </div>
+                <p class="font-krub font-bold text-sm">Pris ca 53.900 DKK</p>
+              </div>
+              <button
+                class="bg-primary text-white font-lalezar text-base px-6 py-2 rounded-full hover:bg-orange-600 transition-colors uppercase whitespace-nowrap self-start"
+              >
+                BOOK NU
+              </button>
+            </div>
+          </div>
+          <div class="flex items-center gap-1 font-krub text-sm">
+            <span>Flybillet tur/retur er inkluderet</span>
+            <svg class="w-3.5 h-3.5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                d="M10.894 2.553a1 1 0 00-1.788 0l-7 14a1 1 0 001.169 1.409l5-1.429A1 1 0 009 15.571V11a1 1 0 112 0v4.571a1 1 0 00.725.962l5 1.428a1 1 0 001.17-1.408l-7-14z"
+              ></path>
+            </svg>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
