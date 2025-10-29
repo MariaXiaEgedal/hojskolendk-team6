@@ -1,8 +1,13 @@
 ---
-
+import Heading from "./Heading.astro";
 ---
 
 <section class="w-full overflow-hidden relative">
+  <!-- Heading -->
+  <div class="text-center py-8">
+    <Heading htmlheading="h2">Elevhistorier</Heading>
+  </div>
+
   <!-- Slider Container -->
   <div
     class="slider-container flex gap-4 px-4 py-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
@@ -48,15 +53,20 @@
   <!-- Modal -->
   <div
     id="imageModal"
-    class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    class="fixed inset-0 bg-black bg-opacity-75 hidden items-center justify-center z-50 p-4"
     onclick="closeModal()"
   >
-    <img
-      id="modalImage"
-      src=""
-      alt="Enlarged postcard"
-      class="max-h-[90vh] max-w-[90vw] object-contain"
-    />
+    <div
+      class="relative bg-white p-4 md:p-8 rounded-lg shadow-2xl max-w-6xl max-h-[95vh] overflow-auto"
+    >
+      <img
+        id="modalImage"
+        src=""
+        alt="Enlarged postcard"
+        class="w-full h-auto object-contain"
+        onclick="event.stopPropagation()"
+      />
+    </div>
   </div>
 </section>
 
@@ -77,20 +87,24 @@
 </style>
 
 <script>
-  function openModal(imgSrc) {
+  function openModal(imgSrc: string) {
     const modal = document.getElementById("imageModal");
-    const modalImg = document.getElementById("modalImage");
-    modal.classList.remove("hidden");
-    modal.classList.add("flex");
-    modalImg.src = imgSrc;
-    document.body.style.overflow = "hidden"; // Prevent background scrolling
+    const modalImg = document.getElementById("modalImage") as HTMLImageElement;
+    if (modal && modalImg) {
+      modal.classList.remove("hidden");
+      modal.classList.add("flex");
+      modalImg.src = imgSrc;
+      document.body.style.overflow = "hidden"; // Prevent background scrolling
+    }
   }
 
   function closeModal() {
     const modal = document.getElementById("imageModal");
-    modal.classList.add("hidden");
-    modal.classList.remove("flex");
-    document.body.style.overflow = ""; // Restore scrolling
+    if (modal) {
+      modal.classList.add("hidden");
+      modal.classList.remove("flex");
+      document.body.style.overflow = ""; // Restore scrolling
+    }
   }
 
   // Close modal with Escape key
@@ -98,10 +112,5 @@
     if (e.key === "Escape") {
       closeModal();
     }
-  });
-
-  // Prevent modal image click from closing modal
-  document.getElementById("modalImage")?.addEventListener("click", (e) => {
-    e.stopPropagation();
   });
 </script>
