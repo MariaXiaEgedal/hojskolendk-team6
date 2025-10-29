@@ -1,0 +1,171 @@
+---
+import Text from "./Text.astro";
+---
+
+<section class="max-w-3xl mx-auto p-8">
+  <div class="border-2 border-dashed border-orange-500 p-8 rounded-lg">
+    <h2 class="text-3xl font-lalezar mb-6 text-center">
+      <span class="text-orange-500">Tilmeld</span> dig til dit næste eventyr
+    </h2>
+    <form class="space-y-4 font-krub">
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <!-- Fornavn og Efternavn -->
+        <div>
+          <label for="fornavn" class="block"
+            >Fornavn<span class="text-orange-500">*</span></label
+          >
+          <input
+            type="text"
+            id="fornavn"
+            name="fornavn"
+            placeholder="Fornavn"
+            required
+            class="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div>
+          <label for="efternavn" class="block"
+            >Efternavn<span class="text-orange-500">*</span></label
+          >
+          <input
+            type="text"
+            id="efternavn"
+            name="efternavn"
+            placeholder="Efternavn"
+            required
+            class="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+      </div>
+
+      <!-- Adresse -->
+      <div>
+        <label for="adresse" class="block"
+          >Adresse<span class="text-orange-500">*</span></label
+        >
+        <input
+          type="text"
+          id="adresse"
+          name="adresse"
+          placeholder="Adresse"
+          required
+          class="w-full p-2 border border-gray-300 rounded"
+        />
+      </div>
+
+      <!-- Post nr. og By -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="postnr" class="block"
+            >Post nr.<span class="text-orange-500">*</span></label
+          >
+          <input
+            type="text"
+            id="postnr"
+            name="postnr"
+            placeholder="Inter input"
+            required
+            class="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div>
+          <label for="by" class="block"
+            >By<span class="text-orange-500">*</span></label
+          >
+          <input
+            type="text"
+            id="by"
+            name="by"
+            placeholder="Inter input"
+            required
+            class="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+      </div>
+
+      <!-- E-Mail og Telefon -->
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div>
+          <label for="email" class="block"
+            >E-Mail<span class="text-orange-500">*</span></label
+          >
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="E-Mail"
+            required
+            class="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+        <div>
+          <label for="telefon" class="block"
+            >Telefon<span class="text-orange-500">*</span></label
+          >
+          <input
+            type="tel"
+            id="telefon"
+            name="telefon"
+            placeholder="Telefon"
+            required
+            class="w-full p-2 border border-gray-300 rounded"
+          />
+        </div>
+      </div>
+
+      <!-- Fødselsdag -->
+      <div>
+        <label for="fodselsdag" class="block"
+          >Fødselsdag (DD-MM-AAAA)<span class="text-orange-500">*</span></label
+        >
+        <input
+          type="text"
+          id="fodselsdag"
+          name="fodselsdag"
+          placeholder="Fødselsdag (DD-MM-AAAA)"
+          required
+          class="w-full p-2 border border-gray-300 rounded"
+        />
+      </div>
+
+      <!-- Bemærkninger -->
+      <div>
+        <label for="bemaerkninger" class="block"
+          >Bemærkninger<span class="text-orange-500">*</span></label
+        >
+        <textarea
+          id="bemaerkninger"
+          name="bemaerkninger"
+          placeholder="Bemærkninger"
+          required
+          rows="4"
+          class="w-full p-2 border border-gray-300 rounded"></textarea>
+      </div>
+
+      <!-- Betingelser -->
+      <div class="flex items-center gap-2">
+        <input
+          type="checkbox"
+          id="betingelser"
+          name="betingelser"
+          required
+          class="h-4 w-4 border-gray-300 rounded text-orange-500 focus:ring-orange-500"
+        />
+        <label for="betingelser" class="text-sm">
+          Jeg har læst og accepteret HöjskolenDKs
+          <a href="#" class="underline">Almindelige Betingelser</a>
+        </label>
+      </div>
+
+      <!-- Submit Button -->
+      <div class="flex justify-center">
+        <button
+          type="submit"
+          class="bg-orange-500 text-white px-8 py-2 rounded hover:bg-orange-600 transition-colors"
+        >
+          TILMELD
+        </button>
+      </div>
+    </form>
+  </div>
+</section>
