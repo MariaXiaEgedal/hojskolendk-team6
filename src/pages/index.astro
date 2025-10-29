@@ -1,9 +1,5 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
-import Button from "../components/Button.astro";
-import Link from "../components/Link.astro";
-import { Image } from "astro:assets";
-import thumbsup from "../assets/images/thumbsup.png";
 import Hero from "../components/Hero.astro";
 import BigJourneys from "../components/BigJourneys.astro";
 import MiniJourneys from "../components/MiniJourneys.astro";
@@ -15,24 +11,10 @@ import Sustainability from "../components/Sustainability.astro";
 import SignupForm from "../components/SignupForm.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
+import GifSection from "../components/GifSection.astro";
 ---
 
 <MainLayout title="Højskolendk-team6">
-  <article>
-    <h1>Index overskrift</h1>
-    <Button>Klik!</Button>
-    <p>
-      Link til <Link href="https://www.kea.dk" target="_blank"
-        >En anden side</Link
-      >
-    </p>
-    <Image src={thumbsup} alt="" />
-  </article>
-
-  <!-- Jeg har bare sat en bagundsfarve på hver sektion så vi kan se hvor sektionerne er. De skal slettes senere -->
-  <!-- Der skal som sådan ikke kodes inde i index.astro (forsiden), men kun i de enkelte komponenter -->
-  <!-- Hvis der er brug for flere komponeneter inde i det "rigtige" komponent, så kan i bare lave flere -->
-
   <!-- /*************************************************/ TYPOGRAPHY EXAMPLES /*************************************************/ -->
   <section class="py-12 px-6 max-w-5xl mx-auto">
     <!-- H1 -->
@@ -62,8 +44,7 @@ import Text from "../components/Text.astro";
   </section>
 
   <!-- /*************************************************/ BIG JOURNEYS /*************************************************/ -->
-  <section id="big-journeys" class="bg-green-200">
-    <Heading>VÆLG DIT EVENTYR!</Heading>
+  <section id="big-journeys">
     <BigJourneys />
   </section>
 
@@ -72,6 +53,9 @@ import Text from "../components/Text.astro";
     <Heading>Sommerhøjskole i udlandet</Heading>
     <MiniJourneys />
   </section>
+
+  <!-- /*************************************************/ GIF SECTION /*************************************************/ -->
+  <GifSection gifSrc="/img/flyrute1.gif" altText="fly gif" />
 
   <!-- /*************************************************/ INFO MEETINGS /*************************************************/ -->
   <section id="info-meetings" class="bg-purple-200">
@@ -85,11 +69,16 @@ import Text from "../components/Text.astro";
     <JourneyActivities />
   </section>
 
+  <!-- /*************************************************/ GIF SECTION 2 /*************************************************/ -->
+  <GifSection gifSrc="/img/flyrute2.gif" altText="fly gif 2" zIndex="-10" />
+
   <!-- /*************************************************/ STUDENT STORIES /*************************************************/ -->
-  <section id="student-stories" class="bg-red-200" aria-label="Elevhistorier">
-    <Heading>Elevhistorier</Heading>
+  <section id="student-stories" aria-label="Elevhistorier">
     <StudentStories />
   </section>
+
+  <!-- /*************************************************/ GIF SECTION 3 /*************************************************/ -->
+  <GifSection gifSrc="/img/flyrute3.gif" altText="fly gif 3" zIndex="-10" />
 
   <!-- /*************************************************/ SOCIAL MEDIA /*************************************************/ -->
   <section id="social" class="bg-cyan-200">
@@ -97,15 +86,20 @@ import Text from "../components/Text.astro";
     <SocialFeed />
   </section>
 
+  <!-- /*************************************************/ GIF SECTION 4 /*************************************************/ -->
+  <GifSection gifSrc="/img/flyrute4.gif" altText="fly gif 4" zIndex="-10" />
+
   <!-- /*************************************************/ THOUGHTFUL / SUSTAINABILITY /*************************************************/ -->
-  <section id="thoughtful-travel" class="bg-lime-200">
-    <Heading>Rejser med omtanke</Heading>
+  <section id="thoughtful-travel">
     <Sustainability />
   </section>
+  <!-- /*************************************************/ GIF SECTION 5 /*************************************************/ -->
+  <GifSection gifSrc="/img/flyrute5.gif" altText="fly gif 5" zIndex="-10" />
 
   <!-- /*************************************************/ SIGNUP FORM /*************************************************/ -->
-  <section id="signup" class="bg-gray-200">
-    <Heading>Tilmeld</Heading>
+  <section id="signup">
     <SignupForm />
+    <!-- /*************************************************/ GIF SECTION 6 /*************************************************/ -->
+    <GifSection gifSrc="/img/flyrute4.gif" altText="fly gif 4" zIndex="-10" />
   </section>
 </MainLayout>
