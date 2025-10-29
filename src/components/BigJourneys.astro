@@ -1,0 +1,47 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+---
+
+<section class="relative px-[20px] lg:px-[130px]">
+  <div class="text-left lg:text-center">
+    <Heading htmlheading="h2" size="medium">VÆLG DIT EVENTYR!</Heading>
+  </div>
+
+  <div class="grid grid-cols-4 lg:grid-cols-12 gap-[20px] lg:pt-10">
+    <!-- Tekst -->
+    <div class="col-span-4 lg:col-span-6 space-y-5">
+      <Heading htmlheading="h3" size="small">
+        Højskoleophold i udlandet - dit livs eventyr
+      </Heading>
+
+      <Text teksttype="brødtekst">
+        Drømmer du om at kombinere fællesskab, oplevelser og læring? Hos
+        HØJSKOLENDK kan du tage på højskole i udlandet og opleve verden sammen
+        med andre unge og danske rejseledere.
+      </Text>
+
+      <Text teksttype="brødtekst">
+        Du kan vælge mellem længere højskoleophold på 2-3 måneder eller et
+        kortere sommerophold på 16-30 dage, perfekt til dig, der vil ud og
+        opleve verden i ferien.
+      </Text>
+    </div>
+
+    <!-- Billede (kun desktop) -->
+    <div class="hidden lg:block col-span-6">
+      <img
+        src="/img/kort.svg"
+        alt="Verdens kort"
+        class="w-full h-auto object-contain"
+      />
+    </div>
+  </div>
+</section>
+
+<!-- Cards-sektion med samme grid-struktur -->
+<section class="px-5 lg:px-[130px] py-10">
+  <div class="grid grid-cols-4 lg:grid-cols-12 gap-5 big-journeys-cards">
+    <!-- Dine kort indsættes her -->
+  </div>
+</section>
