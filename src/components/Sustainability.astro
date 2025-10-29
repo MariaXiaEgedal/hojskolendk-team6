@@ -1,0 +1,58 @@
+---
+import Text from "./Text.astro";
+---
+
+<section class="w-full bg-orange-500/50 py-16">
+  <div class="max-w-7xl mx-auto px-4">
+    <h2 class="text-5xl font-lalezar text-center mb-4 hidden md:block">
+      Vi rejser med omtanke
+    </h2>
+    <p class="text-center text-xl font-krub mb-16 hidden md:block">
+      For os handler eventyr ikke kun om at opleve verden, men også om at passe
+      på den.
+    </p>
+
+    <div class="flex flex-row justify-around md:grid md:grid-cols-3 gap-8 mt-8">
+      <!-- Verdens Skove -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="/img/verdensskove-logo.png"
+          alt="Verdens Skove logo"
+          class="h-12 md:h-24 w-auto object-contain mb-6"
+        />
+        <Text teksttype="body" stylingclasses="max-w-sm hidden md:block">
+          Når du rejser med os, bidrager du til en mere bæredygtig verden. I
+          samarbejde med Verdens Skove har vi allerede reduceret over 100.000 m²
+          regnskov i Nicaragua, og er dermed med til at skabe grønne, livgivende
+          landskaber.
+        </Text>
+      </div>
+
+      <!-- World Animal Protection -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="/img/wap-logo.png"
+          alt="World Animal Protection logo"
+          class="h-12 md:h-24 w-auto object-contain mb-6"
+        />
+        <Text teksttype="body" stylingclasses="max-w-sm hidden md:block">
+          Vi støtter World Animal Protection, som arbejder for at stoppe
+          dyremishandling og beskytte dyr i naturen verden over.
+        </Text>
+      </div>
+
+      <!-- Trees for the Future -->
+      <div class="flex flex-col items-center text-center">
+        <img
+          src="/img/trees-logo.png"
+          alt="Trees for the Future logo"
+          class="h-12 md:h-24 w-auto object-contain mb-6"
+        />
+        <Text teksttype="body" stylingclasses="max-w-sm hidden md:block">
+          Sammen med Trees For The Future planter vi 50 træer for hver elev, der
+          tager på højskoleophold i udlandet.
+        </Text>
+      </div>
+    </div>
+  </div>
+</section>

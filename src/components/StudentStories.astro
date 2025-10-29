@@ -1,0 +1,107 @@
+---
+
+---
+
+<section class="w-full overflow-hidden relative">
+  <!-- Slider Container -->
+  <div
+    class="slider-container flex gap-4 px-4 py-8 overflow-x-auto snap-x snap-mandatory scrollbar-hide"
+  >
+    <!-- Postcard 1 -->
+    <div class="postcard-wrapper flex-none w-[calc(40%-1rem)] snap-start">
+      <img
+        src="/img/postcard1.png"
+        alt="Student Story 1"
+        class="w-full cursor-pointer hover:scale-105 transition-transform"
+        onclick="openModal(this.src)"
+      />
+    </div>
+    <!-- Postcard 2 -->
+    <div class="postcard-wrapper flex-none w-[calc(40%-1rem)] snap-start">
+      <img
+        src="/img/postcard2.png"
+        alt="Student Story 2"
+        class="w-full cursor-pointer hover:scale-105 transition-transform"
+        onclick="openModal(this.src)"
+      />
+    </div>
+    <!-- Postcard 3 -->
+    <div class="postcard-wrapper flex-none w-[calc(40%-1rem)] snap-start">
+      <img
+        src="/img/postcard3.png"
+        alt="Student Story 3"
+        class="w-full cursor-pointer hover:scale-105 transition-transform"
+        onclick="openModal(this.src)"
+      />
+    </div>
+    <!-- Postcard 4 -->
+    <div class="postcard-wrapper flex-none w-[calc(40%-1rem)] snap-start">
+      <img
+        src="/img/postcard4.png"
+        alt="Student Story 4"
+        class="w-full cursor-pointer hover:scale-105 transition-transform"
+        onclick="openModal(this.src)"
+      />
+    </div>
+  </div>
+
+  <!-- Modal -->
+  <div
+    id="imageModal"
+    class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center z-50"
+    onclick="closeModal()"
+  >
+    <img
+      id="modalImage"
+      src=""
+      alt="Enlarged postcard"
+      class="max-h-[90vh] max-w-[90vw] object-contain"
+    />
+  </div>
+</section>
+
+<style>
+  /* Hide scrollbar but keep functionality */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Smooth scroll behavior */
+  .slider-container {
+    scroll-behavior: smooth;
+  }
+</style>
+
+<script>
+  function openModal(imgSrc) {
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    modal.classList.remove("hidden");
+    modal.classList.add("flex");
+    modalImg.src = imgSrc;
+    document.body.style.overflow = "hidden"; // Prevent background scrolling
+  }
+
+  function closeModal() {
+    const modal = document.getElementById("imageModal");
+    modal.classList.add("hidden");
+    modal.classList.remove("flex");
+    document.body.style.overflow = ""; // Restore scrolling
+  }
+
+  // Close modal with Escape key
+  document.addEventListener("keydown", (e) => {
+    if (e.key === "Escape") {
+      closeModal();
+    }
+  });
+
+  // Prevent modal image click from closing modal
+  document.getElementById("modalImage")?.addEventListener("click", (e) => {
+    e.stopPropagation();
+  });
+</script>
