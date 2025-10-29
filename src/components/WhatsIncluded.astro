@@ -1,0 +1,638 @@
+---
+import Text from "./Text.astro";
+---
+
+<h2 class="text-4xl md:text-5xl font-lalezar text-center mt-12">
+  Hvad er inkluderet?
+</h2>
+<section class="py-16 mx-5 md:mx-[130px]">
+  <div class="space-y-4">
+    <!-- Dropdown 1: ALTID INKLUDERET -->
+    <div class="dropdown-item border-2 border-primary rounded-full">
+      <button
+        class="dropdown-button w-full flex items-center justify-between px-6 py-4 text-left font-lalezar text-lg md:text-xl uppercase"
+        data-dropdown="dropdown1"
+      >
+        ALTID INKLUDERET
+        <svg
+          class="dropdown-icon w-6 h-6 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="dropdown-content hidden px-6 pb-6 pt-2" id="dropdown1">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Dansk rejseleder på hele højskoleopholdet
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Indkvartering (Frijige undtaget)
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Danske undervisere</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Entré og lokal transport ift. program
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              24 timers vagttelefon – 365 dage om året
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Skønne, dygtige og særligt udvalgte lokale guider
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Infobreve med rejseinfo, pakkeliste o.lign
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Højskoleaftener med fællesskab og good-times
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Vejledning vedr. visum og indrejseregler
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Medlemskab i HÖJSKOLENDKs Elevforening
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Afrejsemøde og ryste-sammen-dag i DK
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Et stærkt fokus på fællesskab, good-times og adventure
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Fælles afrejse fra Københavns Lufthavn
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Medlemskab af Rejsegarantifonden
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Transfers fra lufthavne tur/retur
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Partnerskab med 'World Animal Protection'
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Personligt højskolebevis (til fx Kvote 2)
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Fredning af regnskov i samarbejde med 'Verdens Skove'
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Lukket Facebook-gruppe for din tur
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Vi planter 50 træer pr. elev i samarbejde med 'Trees.org'
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              15% rabat på vacciner (sikkerrejse.dk)
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown 2: GENERELT INKLUDERET -->
+    <div class="dropdown-item border-2 border-primary rounded-full">
+      <button
+        class="dropdown-button w-full flex items-center justify-between px-6 py-4 text-left font-lalezar text-lg md:text-xl uppercase"
+        data-dropdown="dropdown2"
+      >
+        GENERELT INKLUDERET
+        <svg
+          class="dropdown-icon w-6 h-6 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="dropdown-content hidden px-6 pb-6 pt-2" id="dropdown2">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Flybilletter tur/retur</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Flyskatter, Afgifter & Bagage
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Introdage m/skræddersyet program, fællesskab
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Undervisning i faget 'Teambuilding'
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Undervisning i faget 'Selvudvikling & Kommunikation'
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Rundrejse i Sri Lanka</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown 3: INKLUDERET PÅ MALDIVERNE -->
+    <div class="dropdown-item border-2 border-primary rounded-full">
+      <button
+        class="dropdown-button w-full flex items-center justify-between px-6 py-4 text-left font-lalezar text-lg md:text-xl uppercase"
+        data-dropdown="dropdown3"
+      >
+        INKLUDERET PÅ MALDIVERNE
+        <svg
+          class="dropdown-icon w-6 h-6 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="dropdown-content hidden px-6 pb-6 pt-2" id="dropdown3">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Indkvartering på hyggelig lokal ø
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Velkomstmiddag</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Morgenmad alle dage</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Hurtigfærge tur/retur til Male
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Ø-rundtur og intro til maldivisk kultur og historie m/lokal
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Snorkeltur til smukke koralrev
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Solnedgangs cruise (m/mulighed for at spotte delfiner)
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Fodboldkamp med de skønne lokale børn & unge
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Fisketur og bådhygge</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Beachvolleybane ved stranden
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Udendørs fitness & træningsfaciliteter
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Øens smukkeste strand – kun et stenkast fra dit værelse
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown 4: INKLUDERET PÅ SRI LANKA -->
+    <div class="dropdown-item border-2 border-primary rounded-full">
+      <button
+        class="dropdown-button w-full flex items-center justify-between px-6 py-4 text-left font-lalezar text-lg md:text-xl uppercase"
+        data-dropdown="dropdown4"
+      >
+        INKLUDERET PÅ SRI LANKA
+        <svg
+          class="dropdown-icon w-6 h-6 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="dropdown-content hidden px-6 pb-6 pt-2" id="dropdown4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Indkvartering i Dambulla, Kandy, Ella og Weligama
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Solopgangstur til Sigiriya Rock
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Solnedgangstur til Pindurangal Rock
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Jeepsafari i Minneriya, Kaudulla eller Eco National park
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Cooking class i lokal mudhut
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Riverrafting, Kitugala</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Canyoning, Kitugala</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Besøg ved Temple Tooth, Kandy
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Hike til Ella Rock</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Den bedste del af verdens smukkeste togtur (ca. 1 time)
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Zipline, Ella</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Sightseeing ved Nine Arch Bridge
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Scenariske køreture m. stop ved vandfald
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Hike til Little Adams Peak
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Guidet tur i te-plantagerne
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Surfcamp i Weligama</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Yoga undervisning v. stranden
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Cocunut Tree Hill</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Mirissa Beach</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown 5: INKLUDERET PÅ BALI & GILI ISLANDS -->
+    <div class="dropdown-item border-2 border-primary rounded-full">
+      <button
+        class="dropdown-button w-full flex items-center justify-between px-6 py-4 text-left font-lalezar text-lg md:text-xl uppercase"
+        data-dropdown="dropdown5"
+      >
+        INKLUDERET PÅ BALI & GILI ISLANDS
+        <svg
+          class="dropdown-icon w-6 h-6 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="dropdown-content hidden px-6 pb-6 pt-2" id="dropdown5">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Indkvartering på Bali og Gili Islands
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Morgenmad alle dage</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Sunrise hike til peak på Mount Batur, Bali (1.717 m/højde)
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Monkey Forest i Ubud, Bali
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              De ikoniske risterasser – Tegalalang Rice Terraces, Bali
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Brusende vandfald i regnskoven, Ubud
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Heldagstur Nusa Penida</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Udsigt til Kelingking (T-rex rock)
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">Surf-lektion</p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Dagsudflugt til Canggu eller Seminyak
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Se smukke lokale templer
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Hurtigfærge til Gili Islands
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Privat snorkeltur på Gili Islands
+            </p>
+          </div>
+          <div class="flex items-start gap-2">
+            <span class="text-primary mt-1">></span>
+            <p class="font-krub text-sm md:text-base">
+              Lokal beach clean-up, Gili Islands – vi gør en forskel
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Dropdown 6: IKKE INKLUDERET -->
+    <div class="dropdown-item border-2 border-primary rounded-full">
+      <button
+        class="dropdown-button w-full flex items-center justify-between px-6 py-4 text-left font-lalezar text-lg md:text-xl uppercase"
+        data-dropdown="dropdown6"
+      >
+        <span><span class="text-red-600">IKKE</span> INKLUDERET</span>
+        <svg
+          class="dropdown-icon w-6 h-6 transition-transform duration-300"
+          fill="none"
+          stroke="currentColor"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            stroke-width="2"
+            d="M19 9l-7 7-7-7"></path>
+        </svg>
+      </button>
+      <div class="dropdown-content hidden px-6 pb-6 pt-2" id="dropdown6">
+        <div class="space-y-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-2">
+            <div class="flex items-start gap-2">
+              <span class="text-red-600 mt-1">X</span>
+              <p class="font-krub text-sm md:text-base">
+                Lommepenge & drikkepenge
+              </p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-red-600 mt-1">X</span>
+              <p class="font-krub text-sm md:text-base">
+                Mad, drikke og snacks
+              </p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-red-600 mt-1">X</span>
+              <p class="font-krub text-sm md:text-base">
+                Rejseforsikring (+ evt. afbestillingsforsikring)
+              </p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-red-600 mt-1">X</span>
+              <p class="font-krub text-sm md:text-base">
+                Visum & indrejsedokumenter
+              </p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-red-600 mt-1">X</span>
+              <p class="font-krub text-sm md:text-base">Vaccinationer</p>
+            </div>
+            <div class="flex items-start gap-2">
+              <span class="text-red-600 mt-1">X</span>
+              <p class="font-krub text-sm md:text-base">
+                Indkvartering og transport i friugen
+              </p>
+            </div>
+          </div>
+          <div class="mt-6 pt-4 border-t border-gray-200">
+            <p class="font-krub text-sm md:text-base text-gray-700 italic">
+              NB: Ændringer af program, aktiviteter, undervisning, m.v. kan
+              forekomme jf. vejrforhold, sygdom og andet uforudset.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<script>
+  // Dropdown functionality
+  document.addEventListener("DOMContentLoaded", () => {
+    const dropdownButtons = document.querySelectorAll(".dropdown-button");
+
+    dropdownButtons.forEach((button) => {
+      button.addEventListener("click", () => {
+        const dropdownId = button.getAttribute("data-dropdown");
+        const content = document.getElementById(dropdownId);
+        const icon = button.querySelector(".dropdown-icon");
+        const container = button.closest(".dropdown-item");
+
+        if (content) {
+          content.classList.toggle("hidden");
+          icon?.classList.toggle("rotate-180");
+
+          // Change border radius when dropdown is open
+          if (!content.classList.contains("hidden")) {
+            container?.classList.remove("rounded-full");
+            container?.classList.add("rounded-2xl");
+          } else {
+            container?.classList.remove("rounded-2xl");
+            container?.classList.add("rounded-full");
+          }
+        }
+      });
+    });
+  });
+</script>
