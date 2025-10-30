@@ -14,11 +14,14 @@ import Text from "./Text.astro";
 
     <div class="flex flex-row justify-around md:grid md:grid-cols-3 gap-8 mt-8">
       <!-- Verdens Skove -->
-      <div class="flex flex-col items-center text-center">
+      <div
+        class="sustainability-item flex flex-col items-center text-center opacity-0 transition-all duration-700 hover:scale-105"
+        style="animation-delay: 0ms;"
+      >
         <img
           src="/img/verdensskove-logo.png"
           alt="Verdens Skove logo"
-          class="h-12 md:h-24 w-auto object-contain mb-6"
+          class="h-12 md:h-24 w-auto object-contain mb-6 sustainability-logo"
         />
         <Text teksttype="body" stylingclasses="max-w-sm hidden md:block">
           Når du rejser med os, bidrager du til en mere bæredygtig verden. I
@@ -29,11 +32,14 @@ import Text from "./Text.astro";
       </div>
 
       <!-- World Animal Protection -->
-      <div class="flex flex-col items-center text-center">
+      <div
+        class="sustainability-item flex flex-col items-center text-center opacity-0 transition-all duration-700 hover:scale-105"
+        style="animation-delay: 200ms;"
+      >
         <img
           src="/img/wap-logo.png"
           alt="World Animal Protection logo"
-          class="h-12 md:h-24 w-auto object-contain mb-6"
+          class="h-12 md:h-24 w-auto object-contain mb-6 sustainability-logo"
         />
         <Text teksttype="body" stylingclasses="max-w-sm hidden md:block">
           Vi støtter World Animal Protection, som arbejder for at stoppe
@@ -42,11 +48,14 @@ import Text from "./Text.astro";
       </div>
 
       <!-- Trees for the Future -->
-      <div class="flex flex-col items-center text-center">
+      <div
+        class="sustainability-item flex flex-col items-center text-center opacity-0 transition-all duration-700 hover:scale-105"
+        style="animation-delay: 400ms;"
+      >
         <img
           src="/img/trees-logo.png"
           alt="Trees for the Future logo"
-          class="h-12 md:h-24 w-auto object-contain mb-6"
+          class="h-12 md:h-24 w-auto object-contain mb-6 sustainability-logo"
         />
         <Text teksttype="body" stylingclasses="max-w-sm hidden md:block">
           Sammen med Trees For The Future planter vi 50 træer for hver elev, der
@@ -56,3 +65,71 @@ import Text from "./Text.astro";
     </div>
   </div>
 </section>
+
+<style>
+  @keyframes floatIn {
+    from {
+      opacity: 0;
+      transform: translateY(40px) scale(0.9);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  .sustainability-item.animate {
+    animation: floatIn 0.8s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .sustainability-logo {
+    transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+    filter: grayscale(0%) brightness(1);
+  }
+
+  .sustainability-item:hover .sustainability-logo {
+    filter: grayscale(0%) brightness(1.1);
+    transform: translateY(-5px) rotate(2deg);
+  }
+
+  /* Floating animation for logos */
+  @keyframes float {
+    0%,
+    100% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+  }
+
+  .sustainability-item:hover .sustainability-logo {
+    animation: float 2s ease-in-out infinite;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const items = entry.target.querySelectorAll(".sustainability-item");
+            items.forEach((item, index) => {
+              setTimeout(() => {
+                item.classList.add("animate");
+              }, index * 200);
+            });
+            observer.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.3 }
+    );
+
+    const section = document.querySelector("#sustainability");
+    if (section) {
+      observer.observe(section);
+    }
+  });
+</script>

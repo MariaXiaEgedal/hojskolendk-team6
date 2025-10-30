@@ -22,25 +22,25 @@ import Button from "./Button.astro";
         <!-- striber -->
         <div class="absolute left-0 top-0 bottom-0 w-1">
           <div class="h-full flex flex-col justify-between">
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
-            <div class="h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
+            <div class="stripe h-[3%] bg-primary"></div>
           </div>
         </div>
 
@@ -157,16 +157,16 @@ import Button from "./Button.astro";
           id="carousel-image"
           src="/img/eleverbjerg.svg"
           alt="Gruppe af elever på bjerg"
-          class="w-full h-auto max-w-md mx-auto transition-opacity duration-500"
+          class="w-full h-auto max-w-md mx-auto"
         />
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <button
-            class="bg-primary text-white font-lalezar text-xl px-5 py-2 rounded-full hover:bg-orange-600 transition-colors uppercase border-2 border-primary"
+            class="cta-button bg-primary text-white font-lalezar text-xl px-5 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 uppercase border-2 border-primary hover:shadow-xl hover:scale-105"
           >
             TILMELD DIG
           </button>
           <button
-            class="bg-transparent text-black font-lalezar text-xl px-5 py-2 rounded-full transition-colors uppercase border-2 border-black hover:bg-gray-100"
+            class="cta-button bg-transparent text-black font-lalezar text-xl px-5 py-2 rounded-full transition-all duration-300 uppercase border-2 border-black hover:shadow-xl hover:scale-105"
           >
             RESERVER PLADS
           </button>
@@ -175,6 +175,123 @@ import Button from "./Button.astro";
     </div>
   </div>
 </section>
+
+<style>
+  /* Stripe animation */
+  @keyframes growStripe {
+    from {
+      transform: scaleY(0);
+      opacity: 0;
+    }
+    to {
+      transform: scaleY(1);
+      opacity: 1;
+    }
+  }
+
+  .stripe {
+    transform-origin: top;
+    animation: growStripe 0.5s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+  }
+
+  .stripe:nth-child(1) {
+    animation-delay: 0ms;
+  }
+  .stripe:nth-child(2) {
+    animation-delay: 50ms;
+  }
+  .stripe:nth-child(3) {
+    animation-delay: 100ms;
+  }
+  .stripe:nth-child(4) {
+    animation-delay: 150ms;
+  }
+  .stripe:nth-child(5) {
+    animation-delay: 200ms;
+  }
+  .stripe:nth-child(6) {
+    animation-delay: 250ms;
+  }
+  .stripe:nth-child(7) {
+    animation-delay: 300ms;
+  }
+  .stripe:nth-child(8) {
+    animation-delay: 350ms;
+  }
+  .stripe:nth-child(9) {
+    animation-delay: 400ms;
+  }
+  .stripe:nth-child(10) {
+    animation-delay: 450ms;
+  }
+  .stripe:nth-child(11) {
+    animation-delay: 500ms;
+  }
+  .stripe:nth-child(12) {
+    animation-delay: 550ms;
+  }
+  .stripe:nth-child(13) {
+    animation-delay: 600ms;
+  }
+  .stripe:nth-child(14) {
+    animation-delay: 650ms;
+  }
+  .stripe:nth-child(15) {
+    animation-delay: 700ms;
+  }
+  .stripe:nth-child(16) {
+    animation-delay: 750ms;
+  }
+  .stripe:nth-child(17) {
+    animation-delay: 800ms;
+  }
+  .stripe:nth-child(18) {
+    animation-delay: 850ms;
+  }
+  .stripe:nth-child(19) {
+    animation-delay: 900ms;
+  }
+
+  /* Button pulse animation */
+  @keyframes pulse {
+    0%,
+    100% {
+      box-shadow: 0 0 0 0 rgba(255, 89, 0, 0.7);
+    }
+    50% {
+      box-shadow: 0 0 0 10px rgba(255, 89, 0, 0);
+    }
+  }
+
+  .cta-button {
+    position: relative;
+    overflow: hidden;
+  }
+
+  .cta-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.5);
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.6s,
+      height 0.6s;
+  }
+
+  .cta-button:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  .cta-button:active {
+    animation: pulse 0.6s;
+  }
+</style>
 
 <script>
   const images = [
@@ -193,12 +310,31 @@ import Button from "./Button.astro";
 
   function changeImage() {
     if (carouselImage) {
-      // Change image instantly
+      // Simply change the image
       currentIndex = (currentIndex + 1) % images.length;
       carouselImage.src = images[currentIndex];
     }
   }
 
-  // Start the carousel
+  // Start the carousel with enhanced transitions
   setInterval(changeImage, 2000);
+
+  // Animate location items on page load
+  document.addEventListener("DOMContentLoaded", () => {
+    const locationItems = document.querySelectorAll("#trip-intro .flex.gap-3");
+    locationItems.forEach((item, index) => {
+      (item as HTMLElement).style.opacity = "0";
+      (item as HTMLElement).style.transform = "translateX(-20px)";
+
+      setTimeout(
+        () => {
+          (item as HTMLElement).style.transition =
+            "all 0.6s cubic-bezier(0.4, 0, 0.2, 1)";
+          (item as HTMLElement).style.opacity = "1";
+          (item as HTMLElement).style.transform = "translateX(0)";
+        },
+        300 + index * 100
+      );
+    });
+  });
 </script>
