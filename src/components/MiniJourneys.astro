@@ -89,11 +89,12 @@ const journeys = [
   {
     journeys.map((journey, i) => (
       <div
-        class={`hidden lg:block lg:col-span-4
+        class={`hidden lg:block lg:col-span-4 mini-journey-card opacity-0 translate-y-8
       ${i === 0 ? "lg:col-start-6 lg:col-end-10 lg:row-start-1 self-end" : ""}
       ${i === 1 ? "lg:col-start-10 lg:col-end-13 lg:row-start-1 self-end" : ""}
       ${i === 2 ? "lg:col-start-7 lg:col-end-11 lg:row-start-2" : ""}
     `}
+        style={`transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) ${i * 200}ms;`}
       >
         <a
           href="/singleview"
@@ -132,3 +133,34 @@ const journeys = [
 >
   <Text teksttype="fedbrødtekst">LÆS MERE</Text>
 </a>
+
+<style>
+  .mini-journey-card.visible {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            const cards = document.querySelectorAll(".mini-journey-card");
+            cards.forEach((card) => {
+              card.classList.add("visible");
+            });
+            observer.disconnect();
+          }
+        });
+      },
+      { threshold: 0.2 }
+    );
+
+    const section = document.querySelector("#mini-journeys");
+    if (section) {
+      observer.observe(section);
+    }
+  });
+</script>
