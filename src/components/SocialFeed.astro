@@ -71,12 +71,13 @@ import Text from "./Text.astro";
 
   <!-- DESKTOP: fuld bredde, statisk -->
   <div class="hidden md:block mt-10 w-full">
-    <div class="grid grid-cols-5 w-full">
+    <div class="grid grid-cols-5 w-full social-grid">
       <!-- #1 Billede - Instagram -->
       <a
         href="https://www.instagram.com/hojskolendk"
         target="_blank"
-        class="group relative block"
+        class="group relative block social-item opacity-0"
+        style="transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0ms;"
       >
         <img
           src="img/somepic1.webp"
@@ -99,7 +100,8 @@ import Text from "./Text.astro";
       <a
         href="https://www.tiktok.com/@hojskolendk"
         target="_blank"
-        class="group relative block"
+        class="group relative block social-item opacity-0"
+        style="transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 150ms;"
       >
         <video
           class="w-full h-[500px] object-cover"
@@ -125,7 +127,8 @@ import Text from "./Text.astro";
       <a
         href="https://www.instagram.com/hojskolendk"
         target="_blank"
-        class="group relative block"
+        class="group relative block social-item opacity-0"
+        style="transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 300ms;"
       >
         <img
           src="img/somepic2.webp"
@@ -147,7 +150,8 @@ import Text from "./Text.astro";
       <a
         href="https://www.tiktok.com/@hojskolendk"
         target="_blank"
-        class="group relative block"
+        class="group relative block social-item opacity-0"
+        style="transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 450ms;"
       >
         <video
           class="w-full h-[500px] object-cover"
@@ -172,7 +176,8 @@ import Text from "./Text.astro";
       <a
         href="https://www.instagram.com/hojskolendk"
         target="_blank"
-        class="group relative block"
+        class="group relative block social-item opacity-0"
+        style="transition: all 0.6s cubic-bezier(0.4, 0, 0.2, 1) 600ms;"
       >
         <img
           src="img/somepic3.webp"
@@ -200,5 +205,33 @@ import Text from "./Text.astro";
         transform: translateX(-50%);
       }
     }
+
+    .social-item.visible {
+      opacity: 1 !important;
+    }
   </style>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const observer = new IntersectionObserver(
+        (entries) => {
+          entries.forEach((entry) => {
+            if (entry.isIntersecting) {
+              const items = document.querySelectorAll(".social-item");
+              items.forEach((item) => {
+                item.classList.add("visible");
+              });
+              observer.disconnect();
+            }
+          });
+        },
+        { threshold: 0.2 }
+      );
+
+      const section = document.querySelector("#social");
+      if (section) {
+        observer.observe(section);
+      }
+    });
+  </script>
 </section>
