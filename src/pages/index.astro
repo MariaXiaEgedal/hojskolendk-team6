@@ -3,7 +3,6 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Hero from "../components/Hero.astro";
 import BigJourneys from "../components/BigJourneys.astro";
 import MiniJourneys from "../components/MiniJourneys.astro";
-import InfoMeeting from "../components/InfoMeeting.astro";
 import JourneyActivities from "../components/JourneyActivities.astro";
 import StudentStories from "../components/StudentStories.astro";
 import SocialFeed from "../components/SocialFeed.astro";
@@ -11,7 +10,6 @@ import Sustainability from "../components/Sustainability.astro";
 import SignupForm from "../components/SignupForm.astro";
 import Heading from "../components/Heading.astro";
 import Text from "../components/Text.astro";
-import GifSection from "../components/GifSection.astro";
 ---
 
 <MainLayout title="Højskolendk-team6">
@@ -30,14 +28,9 @@ import GifSection from "../components/GifSection.astro";
     <MiniJourneys />
   </section>
 
-  <!-- /*************************************************/ GIF SECTION /*************************************************/ -->
-  <GifSection gifSrc="/img/flyrute1.gif" altText="fly gif" />
+  <!-- /*************************************************/ GIF SECTION 1 /*************************************************/ -->
 
-  <!-- /*************************************************/ INFO MEETINGS /*************************************************/ -->
-  <section id="info-meetings" class="bg-purple-200">
-    <Heading>INFO MØDER</Heading>
-    <InfoMeeting />
-  </section>
+  <img src="/img/flyrute1.gif" alt="Flyrute" />
 
   <!-- /*************************************************/ JOURNEY ACTIVITIES /*************************************************/ -->
   <section id="journey-activities" class="bg-pink-200">
@@ -46,7 +39,7 @@ import GifSection from "../components/GifSection.astro";
   </section>
 
   <!-- /*************************************************/ GIF SECTION 2 /*************************************************/ -->
-  <GifSection gifSrc="/img/flyrute2.gif" altText="fly gif 2" zIndex="-10" />
+  <img src="/img/flyrute2.gif" alt="Flyrute" />
 
   <!-- /*************************************************/ STUDENT STORIES /*************************************************/ -->
   <section id="student-stories" aria-label="Elevhistorier">
@@ -54,7 +47,7 @@ import GifSection from "../components/GifSection.astro";
   </section>
 
   <!-- /*************************************************/ GIF SECTION 3 /*************************************************/ -->
-  <GifSection gifSrc="/img/flyrute3.gif" altText="fly gif 3" zIndex="-10" />
+  <img src="/img/flyrute3.gif" alt="Flyrute" />
 
   <!-- /*************************************************/ SOCIAL MEDIA /*************************************************/ -->
   <section id="social" class="bg-cyan-200">
@@ -63,19 +56,23 @@ import GifSection from "../components/GifSection.astro";
   </section>
 
   <!-- /*************************************************/ GIF SECTION 4 /*************************************************/ -->
-  <GifSection gifSrc="/img/flyrute4.gif" altText="fly gif 4" zIndex="-10" />
+
+  <img src="/img/flyrute4.gif" alt="Flyrute" />
 
   <!-- /*************************************************/ THOUGHTFUL / SUSTAINABILITY /*************************************************/ -->
   <section id="sustainability">
     <Sustainability />
   </section>
+
   <!-- /*************************************************/ GIF SECTION 5 /*************************************************/ -->
-  <GifSection gifSrc="/img/flyrute5.gif" altText="fly gif 5" zIndex="-10" />
+  <img src="/img/flyrute5.gif" alt="Flyrute" />
 
   <!-- /*************************************************/ SIGNUP FORM /*************************************************/ -->
   <section id="signup">
     <SignupForm />
+
     <!-- /*************************************************/ GIF SECTION 6 /*************************************************/ -->
-    <GifSection gifSrc="/img/flyrute4.gif" altText="fly gif 4" zIndex="-10" />
+
+    <img src="/img/flyrute4.gif" alt="Flyrute" />
   </section>
 </MainLayout>
