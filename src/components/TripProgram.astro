@@ -5,42 +5,48 @@ import Text from "./Text.astro";
 <h2 class="text-4xl md:text-5xl font-lalezar text-center mt-8">Program</h2>
 <section class="py-8 mx-5 md:mx-[130px]">
   <!-- Tab Navigation -->
-  <div class="flex flex-wrap md:flex-nowrap mb-8">
+  <div class="flex flex-wrap md:flex-nowrap mb-8 relative">
+    <div
+      id="tab-indicator"
+      class="absolute bottom-0 left-0 h-1 bg-white transition-all duration-300 ease-out"
+      style="width: 0; opacity: 0;"
+    >
+    </div>
     <button
-      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white active"
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white active relative overflow-hidden"
       data-tab="introdage"
     >
-      Introdage
+      <span class="relative z-10">Introdage</span>
     </button>
     <button
-      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-all duration-300 relative overflow-hidden"
       data-tab="teambuilding"
     >
-      Teambuilding
+      <span class="relative z-10">Teambuilding</span>
     </button>
     <button
-      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-all duration-300 relative overflow-hidden"
       data-tab="rundrejse"
     >
-      Rundrejse & Eventyr
+      <span class="relative z-10">Rundrejse & Eventyr</span>
     </button>
     <button
-      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-all duration-300 relative overflow-hidden"
       data-tab="selvudvikling"
     >
-      Selvudviklink & Kommunikation
+      <span class="relative z-10">Selvudviklink & Kommunikation</span>
     </button>
     <button
-      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-all duration-300 relative overflow-hidden"
       data-tab="ohop"
     >
-      Ø-Hop
+      <span class="relative z-10">Ø-Hop</span>
     </button>
     <button
-      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-opacity"
+      class="tab-button flex-1 px-3 py-2 font-lalezar text-sm md:text-base uppercase bg-primary text-white opacity-50 hover:opacity-100 transition-all duration-300 relative overflow-hidden"
       data-tab="friuge"
     >
-      Friuge
+      <span class="relative z-10">Friuge</span>
     </button>
   </div>
 
@@ -63,7 +69,7 @@ import Text from "./Text.astro";
                 d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
                 clip-rule="evenodd"></path>
             </svg>
-            <p class="font-krub text-lg">Dubai/Doha/Bangkok/Singapore</p>
+            <p class="font-krub text-lg">Dubai, Doha, Bangkok, Singapore</p>
           </div>
           <p class="font-krub text-sm md:text-base mb-4">
             Vi starter vores højskole-eventyr med nogle spændende og sjove
@@ -95,7 +101,7 @@ import Text from "./Text.astro";
       <div class="flex flex-col md:flex-row gap-8 items-start">
         <div class="w-full md:w-1/3">
           <img
-            src="/img/introdage.png"
+            src="/img/teambuilding.svg"
             alt="Teambuilding"
             class="w-full h-auto"
           />
@@ -104,26 +110,32 @@ import Text from "./Text.astro";
           <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
             TEAMBUILDING
           </h3>
+          <div class="flex items-center gap-2 text-primary mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-krub text-lg">Dhiffushi, Maldiverne</p>
+          </div>
           <p class="font-krub text-sm md:text-base mb-4">
-            Vi starter vores højskole-eventyr med nogle spændende og sjove
-            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
-            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
-            fællesmiddage, sightseeing, oplevelser og vores helt eget
-            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
-            en sjov og aktiv dag.
+            Maldiverne er et smukt ø-rige, hvor vi bor på Dhiffushi – en ø med
+            sandstrande så hvide, at de næsten blænder dig – og det mest
+            indbydende turkisblåt vand så langt øjet rækker. Under havets
+            overflade finder man noget af det bedste snorkling og dykning i hele
+            verden. Her er neon-farvede fisk, skildpadder, djævlerokker,
+            revhajer og farverige koraller der bare venter på at blive
+            udforsket.
           </p>
           <p class="font-krub text-sm md:text-base">
-            I forhold til destination for vores introdage, så afhænger det af
-            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
-            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
-            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
-            hvilken by vi lander i.
-          </p>
-          <p class="font-krub text-sm md:text-base mt-4">
-            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
-            kan glæde jer til sand mellem tæerne, masser af sol på huden,
-            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
-            mere sammen.
+            Glæd dig også til beachvolley på stranden med højskolevennerne,
+            fodboldkamp mod de lokale børn, lækre frugtmarkeder, middags-lure i
+            hængekøjen og hyggelige stunder under stjernerne. Og ikke mindst til
+            det inspirerende, aktive, sjove og lærerige fag ‘Teambuilding’, hvor
+            vi lærer hinanden meget bedre at kende, udfordrer jer med sjove og
+            spændende samarbejdsøvelser og lærer noget om psykologien ift. at
+            være sammen med andre mennesker.
           </p>
         </div>
       </div>
@@ -134,7 +146,7 @@ import Text from "./Text.astro";
       <div class="flex flex-col md:flex-row gap-8 items-start">
         <div class="w-full md:w-1/3">
           <img
-            src="/img/introdage.png"
+            src="/img/rundrejse.svg"
             alt="Rundrejse & Eventyr"
             class="w-full h-auto g"
           />
@@ -143,26 +155,38 @@ import Text from "./Text.astro";
           <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
             RUNDREJSE & EVENTYR
           </h3>
+          <div class="flex items-center gap-2 text-primary mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-krub text-lg">
+              Dambulla, Kandy, Ella & Weligama, Sri Lanka
+            </p>
+          </div>
           <p class="font-krub text-sm md:text-base mb-4">
-            Vi starter vores højskole-eventyr med nogle spændende og sjove
-            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
-            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
-            fællesmiddage, sightseeing, oplevelser og vores helt eget
-            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
-            en sjov og aktiv dag.
+            Vi starter vores eventyrlige rundrejse i Sri Lanka i Dambulla. Her
+            oplever vi bl.a. Sigiriya Rock og nationalparken Udawalawe, med
+            bl.a. elefanter, leoparder, bjørne og vandbøfler og smukke bjerge.
+            Næste stop er Kandy – en charmerende by med templer, travle gader og
+            en smuk sø midt i byen. Vi besøger ’Temple of Tooth’, går på
+            opdagelse i byen og kaster os ud i river rafting og canyoning.
           </p>
           <p class="font-krub text-sm md:text-base">
-            I forhold til destination for vores introdage, så afhænger det af
-            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
-            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
-            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
-            hvilken by vi lander i.
+            Fra Kandy, bevæger vi os sydpå til den hyggelige landsby Ella, hvor
+            der venter bjerglandskaber, te-plantager og smukke vandfald. Vi
+            hiker gennem te-plantager til Little Adam’s Peak i 1.100 meters
+            højde, og bevæger os ned igen med en fed tur på zipline. Dagene går
+            også med den berømte ’Nine Arch Bridge’, togtur gennem landskabet og
+            et hike til Ella Rock.
           </p>
           <p class="font-krub text-sm md:text-base mt-4">
-            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
-            kan glæde jer til sand mellem tæerne, masser af sol på huden,
-            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
-            mere sammen.
+            Vi runder tiden i Sri Lanka af med lækre strande og surf-vibes på
+            sydkysten i Weligama. Her hopper vi surfboards og prøver kræfter med
+            begynder-bølgerne i tropiske omgivelser, har mulighed for yoga og
+            tager på dagstur til Mirissa, hvor det berømte Coconut Hill ligger.
           </p>
         </div>
       </div>
@@ -173,7 +197,7 @@ import Text from "./Text.astro";
       <div class="flex flex-col md:flex-row gap-8 items-start">
         <div class="w-full md:w-1/3">
           <img
-            src="/img/introdage.png"
+            src="/img/selvudvikling.svg"
             alt="Selvudvikling & Kommunikation"
             class="w-full h-auto"
           />
@@ -182,26 +206,24 @@ import Text from "./Text.astro";
           <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
             SELVUDVIKLING & KOMMUNIKATION
           </h3>
+          <div class="flex items-center gap-2 text-primary mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-krub text-lg">Bali, Indonesien</p>
+          </div>
           <p class="font-krub text-sm md:text-base mb-4">
-            Vi starter vores højskole-eventyr med nogle spændende og sjove
-            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
-            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
-            fællesmiddage, sightseeing, oplevelser og vores helt eget
-            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
-            en sjov og aktiv dag.
-          </p>
-          <p class="font-krub text-sm md:text-base">
-            I forhold til destination for vores introdage, så afhænger det af
-            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
-            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
-            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
-            hvilken by vi lander i.
-          </p>
-          <p class="font-krub text-sm md:text-base mt-4">
-            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
-            kan glæde jer til sand mellem tæerne, masser af sol på huden,
-            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
-            mere sammen.
+            Midt på Bali, i kunstnerbyen Ubud, bor vi blandt junglens mange
+            lyde, med vandfald i skjulte laguner og aber der hopper fra gren til
+            gren mellem trætoppene. Alt på Bali foregår i sit eget tempo og I
+            kan se frem til at komme helt ned i ø-tempo, hvor folk spiser deres
+            morgenmad i solen, dyrker yoga eller smider et surfbræt under
+            fødderne og kaster sig ud i bølgerne. Hvis vi har lyst til eventyr
+            og adrenalin, kan vi roadtrippe den på scootere eller bestige de
+            aktive vulkaner i området.
           </p>
         </div>
       </div>
@@ -211,32 +233,40 @@ import Text from "./Text.astro";
     <div class="tab-content hidden" id="ohop">
       <div class="flex flex-col md:flex-row gap-8 items-start">
         <div class="w-full md:w-1/3">
-          <img src="/img/introdage.png" alt="Ø-Hop" class="w-full h-auto" />
+          <img src="/img/hop.svg" alt="Ø-Hop" class="w-full h-auto" />
         </div>
         <div class="w-full md:w-2/3">
           <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
             Ø-HOP
           </h3>
+          <div class="flex items-center gap-2 text-primary mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-krub text-lg">Gili Islands, Indonesien</p>
+          </div>
           <p class="font-krub text-sm md:text-base mb-4">
-            Vi starter vores højskole-eventyr med nogle spændende og sjove
-            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
-            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
-            fællesmiddage, sightseeing, oplevelser og vores helt eget
-            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
-            en sjov og aktiv dag.
+            Glæd jer til en håndfuld dage på de smukke og tropiske Gili øer, der
+            ligger et par timers sejlads fra Bali. Vi smider skoene, går i bare
+            tæer i det varme sand og nyder de lækre bounty-strande, det
+            krystalblå hav, de svajende palmer i vandkanten og det afslappede
+            ø-liv.Glæd jer til en håndfuld dage på de smukke og tropiske Gili
+            øer, der ligger et par timers sejlads fra Bali. Vi smider skoene,
+            går i bare tæer i det varme sand og nyder de lækre bounty-strande,
+            det krystalblå hav, de svajende palmer i vandkanten og det
+            afslappede ø-liv.
           </p>
           <p class="font-krub text-sm md:text-base">
-            I forhold til destination for vores introdage, så afhænger det af
-            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
-            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
-            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
-            hvilken by vi lander i.
+            Vi bor på Gili Air – den mest autentiske af øerne – og det er
+            desuden oplagt at tage på ø-hop til både Gili Trawangan og Gili
+            Meno.
           </p>
           <p class="font-krub text-sm md:text-base mt-4">
-            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
-            kan glæde jer til sand mellem tæerne, masser af sol på huden,
-            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
-            mere sammen.
+            De lokale kalder øerne ‘Gili Indah’, der betyder “små smukke øer” –
+            og det forstår vi rigtigt godt.
           </p>
         </div>
       </div>
@@ -246,32 +276,35 @@ import Text from "./Text.astro";
     <div class="tab-content hidden" id="friuge">
       <div class="flex flex-col md:flex-row gap-8 items-start">
         <div class="w-full md:w-1/3">
-          <img src="/img/introdage.png" alt="Friuge" class="w-full h-auto" />
+          <img src="/img/friuge.svg" alt="Friuge" class="w-full h-auto" />
         </div>
         <div class="w-full md:w-2/3">
           <h3 class="font-lalezar text-2xl md:text-3xl uppercase mb-4">
             FRIUGE
           </h3>
+          <div class="flex items-center gap-2 text-primary mb-4">
+            <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+              <path
+                fill-rule="evenodd"
+                d="M5.05 4.05a7 7 0 119.9 9.9L10 18.9l-4.95-4.95a7 7 0 010-9.9zM10 11a2 2 0 100-4 2 2 0 000 4z"
+                clip-rule="evenodd"></path>
+            </svg>
+            <p class="font-krub text-lg">Indonesien</p>
+          </div>
           <p class="font-krub text-sm md:text-base mb-4">
-            Vi starter vores højskole-eventyr med nogle spændende og sjove
-            introdage, hvor dagene er skræddersyet til vores nye fællesskab. Vi
-            lærer hinanden bedre at kende og dagene går bl.a. med hyggelige
-            fællesmiddage, sightseeing, oplevelser og vores helt eget
-            'HÖJSKOLENDK Adventurerace', der bringer os vidt omkring i byen til
-            en sjov og aktiv dag.
+            Efter tiden på Bali & Gili Islands har vi friuge, hvor Indonesiens
+            ø-rige med mere end 17.000 øer ligger for vores fødder. Vi kan varmt
+            anbefale at besøge øerne Lombok, Nusa Lembongang, Komodo & Flores –
+            og ellers kan tiden også bruges på at blive sej på et surfbræt eller
+            på yoga i den hyggelige by ved stranden; Canggu.
           </p>
           <p class="font-krub text-sm md:text-base">
-            I forhold til destination for vores introdage, så afhænger det af
-            flybilletter, sæson og datoer for opholdet. Oftest har vi afholdt
-            introdagene i enten Dubai, Bangkok, Doha eller Singapore og i kan
-            glæde jer til nogle skønne, spændende og sjove dage, ligegyldigt
-            hvilken by vi lander i.
+            Vi snakker selvfølgelig alle mulighederne igennem undervejs på
+            opholdet, så vi med sommerfugle i maven kan rejse på friuge.
           </p>
           <p class="font-krub text-sm md:text-base mt-4">
-            Efter introdagene flyver vi til trope-paradiset Maldiverne, hvor I
-            kan glæde jer til sand mellem tæerne, masser af sol på huden,
-            tyrkisblåt vand og inspirerende undervisning der rysler holdet endnu
-            mere sammen.
+            Vi mødes igen i Denpasar lufthavn på Bali for at flyve mod Danmark,
+            hvor gensynet med familie, venner, kærester og kæledyr venter.
           </p>
         </div>
       </div>
@@ -279,11 +312,90 @@ import Text from "./Text.astro";
   </div>
 </section>
 
+<style>
+  /* Tab hover ripple effect */
+  .tab-button::before {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition:
+      width 0.5s,
+      height 0.5s;
+  }
+
+  .tab-button:hover::before {
+    width: 300px;
+    height: 300px;
+  }
+
+  /* Content fade in animation */
+  @keyframes contentFadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+
+  .tab-content.active {
+    animation: contentFadeIn 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Image zoom on hover */
+  .tab-content img {
+    transition: transform 0.5s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  .tab-content:hover img {
+    transform: scale(1.05);
+  }
+
+  /* Tab indicator animation */
+  #tab-indicator {
+    height: 3px;
+    background: white;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.5);
+  }
+</style>
+
 <script>
-  // Tab functionality
+  // Tab functionality with enhanced animations
   document.addEventListener("DOMContentLoaded", () => {
     const tabButtons = document.querySelectorAll(".tab-button");
     const tabContents = document.querySelectorAll(".tab-content");
+    const tabIndicator = document.getElementById("tab-indicator");
+
+    // Initialize tab indicator
+    function updateTabIndicator(button: Element) {
+      if (!tabIndicator) return;
+
+      const rect = button.getBoundingClientRect();
+      const container = button.parentElement?.getBoundingClientRect();
+
+      if (container) {
+        const left = rect.left - container.left;
+        const width = rect.width;
+
+        tabIndicator.style.left = `${left}px`;
+        tabIndicator.style.width = `${width}px`;
+        tabIndicator.style.opacity = "1";
+      }
+    }
+
+    // Initialize on first tab
+    const activeTab = document.querySelector(".tab-button.active");
+    if (activeTab) {
+      setTimeout(() => updateTabIndicator(activeTab), 100);
+    }
 
     tabButtons.forEach((button) => {
       button.addEventListener("click", () => {
@@ -299,19 +411,73 @@ import Text from "./Text.astro";
         button.classList.add("active");
         button.classList.remove("opacity-50");
 
-        // Hide all tab contents
+        // Update tab indicator
+        updateTabIndicator(button);
+
+        // Hide all tab contents with fade out
         tabContents.forEach((content) => {
-          content.classList.remove("active");
-          content.classList.add("hidden");
+          (content as HTMLElement).style.opacity = "0";
+          setTimeout(() => {
+            content.classList.remove("active");
+            content.classList.add("hidden");
+          }, 200);
         });
 
-        // Show selected tab content
-        const selectedContent = document.getElementById(tabId);
-        if (selectedContent) {
-          selectedContent.classList.remove("hidden");
-          selectedContent.classList.add("active");
+        // Show selected tab content with fade in
+        setTimeout(() => {
+          const selectedContent = document.getElementById(tabId);
+          if (selectedContent) {
+            selectedContent.classList.remove("hidden");
+            (selectedContent as HTMLElement).style.opacity = "0";
+            selectedContent.classList.add("active");
+
+            // Trigger reflow
+            selectedContent.offsetHeight;
+
+            (selectedContent as HTMLElement).style.transition =
+              "opacity 0.5s ease-in-out";
+            (selectedContent as HTMLElement).style.opacity = "1";
+          }
+        }, 250);
+      });
+
+      // Add hover effect for tab indicator
+      button.addEventListener("mouseenter", () => {
+        if (!button.classList.contains("active")) {
+          const tempIndicator = document.createElement("div");
+          tempIndicator.style.position = "absolute";
+          tempIndicator.style.bottom = "0";
+          tempIndicator.style.height = "2px";
+          tempIndicator.style.background = "rgba(255, 255, 255, 0.3)";
+          tempIndicator.style.transition = "all 0.3s";
+
+          const rect = button.getBoundingClientRect();
+          const container = button.parentElement?.getBoundingClientRect();
+
+          if (container) {
+            tempIndicator.style.left = `${rect.left - container.left}px`;
+            tempIndicator.style.width = `${rect.width}px`;
+          }
+
+          button.parentElement?.appendChild(tempIndicator);
+
+          button.addEventListener(
+            "mouseleave",
+            () => {
+              tempIndicator.remove();
+            },
+            { once: true }
+          );
         }
       });
+    });
+
+    // Window resize handler for tab indicator
+    window.addEventListener("resize", () => {
+      const activeTab = document.querySelector(".tab-button.active");
+      if (activeTab) {
+        updateTabIndicator(activeTab);
+      }
     });
   });
 </script>

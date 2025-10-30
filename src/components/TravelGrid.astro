@@ -1,7 +1,8 @@
 ---
 import Heading from "./Heading.astro";
 import Text from "./Text.astro";
-const imagesTop = [
+
+const allImages = [
   {
     src: "rejse1.svg",
     title: "FRA PARADISØER TIL STORBYLYS",
@@ -26,8 +27,6 @@ const imagesTop = [
     subtitle: "HAWAII, AUSTRALIEN, JAPAN, BALI & GILI ISLANDS",
     badge: "3 måneder",
   },
-];
-const imagesBottom = [
   {
     src: "rejse5.svg",
     title: "TROPISK RUNDREJSE",
@@ -55,150 +54,284 @@ const imagesBottom = [
 ];
 ---
 
-<!-- Øverste sektion -->
-<div class="grid grid-cols-2 gap-8 mx-[20px] md:mx-[130px] mb-12">
-  <div class="flex flex-col gap-8">
-    {
-      [imagesTop[0], imagesTop[2]].map((img) => (
-        <div class="relative group w-full">
-          <img
-            src={`/img/${img.src}`}
-            alt={img.src}
-            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
-            <Heading
-              htmlheading="h4"
-              size="xsmall"
-              stylingclasses="text-white drop-shadow"
-            >
-              {img.title}
-            </Heading>
-            <Text
-              teksttype="brødtekst"
-              stylingclasses="text-white text-sm drop-shadow"
-            >
-              {img.subtitle}
-            </Text>
-            <Text
-              teksttype="fedbrødtekst"
-              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
-            >
-              {img.badge}
-            </Text>
-          </div>
+<!-- Horizontal Scroll Container -->
+<div class="overflow-x-auto scrollbar-hide">
+  <div class="flex gap-6 pl-[20px] md:pl-[130px] pr-[20px] md:pr-[130px] pb-4">
+    <!-- Column 1 -->
+    <div class="flex flex-col gap-6 min-w-[40%] md:min-w-[calc(45%-12px)]">
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[0].src}`}
+          alt={allImages[0].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[0].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[0].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[0].badge}
+          </Text>
         </div>
-      ))
-    }
-  </div>
-  <div class="flex flex-col gap-8">
-    {
-      [imagesTop[1], imagesTop[3]].map((img) => (
-        <div class="relative group w-full">
-          <img
-            src={`/img/${img.src}`}
-            alt={img.src}
-            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
-            <Heading
-              htmlheading="h4"
-              size="xsmall"
-              stylingclasses="text-white drop-shadow"
-            >
-              {img.title}
-            </Heading>
-            <Text
-              teksttype="brødtekst"
-              stylingclasses="text-white text-sm drop-shadow"
-            >
-              {img.subtitle}
-            </Text>
-            <Text
-              teksttype="fedbrødtekst"
-              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
-            >
-              {img.badge}
-            </Text>
-          </div>
+      </a>
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[2].src}`}
+          alt={allImages[2].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[2].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[2].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[2].badge}
+          </Text>
         </div>
-      ))
-    }
+      </a>
+    </div>
+
+    <!-- Column 2 -->
+    <div class="flex flex-col gap-6 min-w-[40%] md:min-w-[calc(45%-12px)]">
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[1].src}`}
+          alt={allImages[1].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[1].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[1].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[1].badge}
+          </Text>
+        </div>
+      </a>
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[3].src}`}
+          alt={allImages[3].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[3].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[3].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[3].badge}
+          </Text>
+        </div>
+      </a>
+    </div>
+
+    <!-- Column 3 -->
+    <div class="flex flex-col gap-6 min-w-[40%] md:min-w-[calc(45%-12px)]">
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[4].src}`}
+          alt={allImages[4].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[4].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[4].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[4].badge}
+          </Text>
+        </div>
+      </a>
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[6].src}`}
+          alt={allImages[6].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[6].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[6].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[6].badge}
+          </Text>
+        </div>
+      </a>
+    </div>
+
+    <!-- Column 4 -->
+    <div class="flex flex-col gap-6 min-w-[40%] md:min-w-[calc(45%-12px)]">
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[5].src}`}
+          alt={allImages[5].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[5].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[5].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[5].badge}
+          </Text>
+        </div>
+      </a>
+      <a href="/singleview" class="relative group w-full block cursor-pointer">
+        <img
+          src={`/img/${allImages[7].src}`}
+          alt={allImages[7].title}
+          class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-primary"
+          loading="lazy"
+        />
+        <div
+          class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none"
+        >
+          <Heading
+            htmlheading="h4"
+            size="xsmall"
+            stylingclasses="text-white drop-shadow-lg"
+          >
+            {allImages[7].title}
+          </Heading>
+          <Text
+            teksttype="brødtekst"
+            stylingclasses="text-white text-sm drop-shadow-lg"
+          >
+            {allImages[7].subtitle}
+          </Text>
+          <Text
+            teksttype="fedbrødtekst"
+            stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow-lg transition-colors group-hover:text-primary"
+          >
+            {allImages[7].badge}
+          </Text>
+        </div>
+      </a>
+    </div>
   </div>
 </div>
 
-<!-- Nederste sektion -->
-<div class="grid grid-cols-2 gap-8 mx-[130px] max-sm:mx-5">
-  <div class="flex flex-col gap-8">
-    {
-      [imagesBottom[0], imagesBottom[2]].map((img) => (
-        <div class="relative group w-full">
-          <img
-            src={`/img/${img.src}`}
-            alt={img.src}
-            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
-            <Heading
-              htmlheading="h4"
-              size="xsmall"
-              stylingclasses="text-white drop-shadow"
-            >
-              {img.title}
-            </Heading>
-            <Text
-              teksttype="brødtekst"
-              stylingclasses="text-white text-sm drop-shadow"
-            >
-              {img.subtitle}
-            </Text>
-            <Text
-              teksttype="fedbrødtekst"
-              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
-            >
-              {img.badge}
-            </Text>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-  <div class="flex flex-col gap-8">
-    {
-      [imagesBottom[1], imagesBottom[3]].map((img) => (
-        <div class="relative group w-full">
-          <img
-            src={`/img/${img.src}`}
-            alt={img.src}
-            class="w-full rounded-3xl border-4 border-transparent transition-all group-hover:border-[#FF6600] group-hover:border-4"
-            loading="lazy"
-          />
-          <div class="absolute inset-0 flex flex-col justify-end p-6 pointer-events-none">
-            <Heading
-              htmlheading="h4"
-              size="xsmall"
-              stylingclasses="text-white drop-shadow"
-            >
-              {img.title}
-            </Heading>
-            <Text
-              teksttype="brødtekst"
-              stylingclasses="text-white text-sm drop-shadow"
-            >
-              {img.subtitle}
-            </Text>
-            <Text
-              teksttype="fedbrødtekst"
-              stylingclasses="absolute top-4 right-4 text-white text-sm drop-shadow transition-colors group-hover:text-[#FF6600]"
-            >
-              {img.badge}
-            </Text>
-          </div>
-        </div>
-      ))
-    }
-  </div>
-</div>
+<style>
+  /* Hide scrollbar for Chrome, Safari and Opera */
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+
+  /* Hide scrollbar for IE, Edge and Firefox */
+  .scrollbar-hide {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+</style>
