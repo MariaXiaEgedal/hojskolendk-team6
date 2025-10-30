@@ -40,8 +40,9 @@ import Text from "./Text.astro";
       >
     </nav>
     <a
-      href="#"
+      href="#signup"
       class="hidden lg:inline-block border-2 border-primary rounded-full px-5 py-2 text-primary hover:text-white font-bold text-xl hover:bg-primary transition"
+      onclick="event.preventDefault();document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });"
       >TILMELD</a
     >
     <!-- Burger menu button -->
@@ -98,13 +99,15 @@ import Text from "./Text.astro";
       </a>
     </nav>
     <a
-      href="#"
+      href="#signup"
       class="menu-signup-btn border-2 border-white rounded-full px-6 py-2 text-center"
-      ><Text
+      onclick="event.preventDefault();document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });"
+    >
+      <Text
         teksttype="fedbrødtekst"
         stylingclasses="text-white hover:text-primary">TILMELD</Text
-      ></a
-    >
+      >
+    </a>
 
     <script>
       const burgerBtn = document.getElementById("burgerBtn");
