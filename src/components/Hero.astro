@@ -3,7 +3,7 @@ import Heading from "./Heading.astro";
 import Text from "./Text.astro";
 ---
 
-<div class="relative w-full h-[600px] md:h-[750px] mb-10 bg-white">
+<div class="relative w-full h-[600px] md:h-[650px] mb-10 bg-white">
   <video
     src="/img/hero-film.MP4"
     autoplay
@@ -25,13 +25,13 @@ import Text from "./Text.astro";
     >
       EVENTYRLIGE HØJSKOLEOPHOLD I UDLANDET FOR UNGE
     </Text>
-    <a href="#tilmeld" class="block lg:hidden mt-8 mx-auto w-fit">
-      <button
-        class="px-6 py-2 border-2 border-primary rounded-full text-primary hover:text-white hover:bg-primary"
-      >
-        <Text teksttype="fedbrødtekst" stylingclasses=" ">TILMELD</Text>
-      </button>
-    </a>
+    <button
+      class="block lg:hidden mt-8 mx-auto w-fit px-6 py-2 border-2 border-primary rounded-full text-primary hover:text-white hover:bg-primary"
+      onclick="document.getElementById('signup')?.scrollIntoView({ behavior: 'smooth' });"
+      type="button"
+    >
+      <Text teksttype="fedbrødtekst" stylingclasses=" ">TILMELD</Text>
+    </button>
   </div>
   <svg
     class="absolute -bottom-1 left-0 w-full h-30"
