@@ -1,0 +1,117 @@
+---
+import Heading from "./Heading.astro";
+import Text from "./Text.astro";
+
+const journeys = [
+  {
+    img: "sommerrejse1.svg",
+    title: "BALI, LOMBOK & GILI ISLANDS",
+    days: "30 dage",
+  },
+  {
+    img: "sommerrejse2.svg",
+    title: "JAPAN",
+    days: "16 dage",
+  },
+  {
+    img: "sommerrejse3.svg",
+    title: "SYDKOREA & JAPAN",
+    days: "28 dage",
+  },
+];
+---
+
+<div
+  x-data="{ page: 0 }"
+  class="relative grid grid-cols-4 lg:grid-cols-12 gap-[20px] mx-[20px] lg:mx-[130px] items-start"
+>
+  <!-- BALI ikon -->
+  <img
+    src="/img/bali-ikon.svg"
+    alt="Bali ikon"
+    class="hidden lg:block lg:col-start-5 lg:col-end-6 lg:row-start-2 lg:self-center w-[150px] max-w-none z-10 -mt-60"
+  />
+
+  <!-- JAPAN ikon -->
+  <img
+    src="/img/japan-ikon.svg"
+    alt="Japan ikon"
+    class="hidden lg:block lg:col-start-11 lg:row-start-2 w-[65px]"
+  />
+
+  <!-- Tekst -->
+  <div
+    class="col-span-4 lg:col-span-4 flex flex-col justify-center lg:mt-40 mb-4 lg:mb-0"
+  >
+    <Heading htmlheading="h3" size="small">Sommerhøjskole i udlandet</Heading>
+    <Text teksttype="brødtekst" stylingclasses="mt-4">
+      Tag på højskole i udlandet i din sommerferie i 16-30 dage, og glæd dig til
+      et fedt rejseeventyr, med vilde naturoplevelser, spændende kulturmøder,
+      adventure og adrenalin, inspirerende undervisning og et stærkt fællesskab
+      og sammenhold.
+    </Text>
+  </div>
+
+  <!-- MOBIL: vandret scroll -->
+  <div
+    class="col-span-4 lg:hidden flex gap-4 overflow-x-auto pb-4 snap-x snap-mandatory"
+  >
+    {
+      journeys.map((journey) => (
+        <div class="relative min-w-[90%] snap-start rounded-3xl overflow-hidden group border-2 border-transparent hover:border-primary transition-all duration-300">
+          <img
+            src={`/img/${journey.img}`}
+            alt={journey.title}
+            class="w-full h-[320px] md:h-[540px] object-cover object-center rounded-3xl"
+          />
+          <div class="absolute inset-0 flex flex-col justify-end px-4 pb-8 gap-1">
+            <div class="absolute top-4 right-4 transition-colors duration-300">
+              <Text
+                teksttype="fedbrødtekst"
+                stylingclasses="text-white group-hover:text-orange-500"
+              >
+                {journey.days}
+              </Text>
+            </div>
+            <Heading htmlheading="h4" size="xsmall" stylingclasses="text-white">
+              {journey.title}
+            </Heading>
+          </div>
+        </div>
+      ))
+    }
+  </div>
+
+  <!-- DESKTOP -->
+  {
+    journeys.map((journey, i) => (
+      <div
+        class={`hidden lg:block lg:col-span-4
+      ${i === 0 ? "lg:col-start-6 lg:col-end-10 lg:row-start-1 self-end" : ""}
+      ${i === 1 ? "lg:col-start-10 lg:col-end-13 lg:row-start-1 self-end" : ""}
+      ${i === 2 ? "lg:col-start-7 lg:col-end-11 lg:row-start-2" : ""}
+    `}
+      >
+        <div class="relative group w-full rounded-3xl overflow-hidden border-4 border-transparent hover:border-primary transition-all duration-300">
+          <img
+            src={`/img/${journey.img}`}
+            alt={journey.title}
+            class="w-full rounded-3xl"
+          />
+
+          <div class="absolute inset-0 flex flex-col justify-end px-4 pb-8 gap-1">
+            <div class="absolute top-4 right-4 text-white group-hover:text-primary transition-colors duration-300">
+              <Text teksttype="fedbrødtekst" stylingclasses="text-white">
+                {journey.days}
+              </Text>
+            </div>
+
+            <Heading htmlheading="h4" size="xsmall" stylingclasses="text-white">
+              {journey.title}
+            </Heading>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>
