@@ -607,6 +607,33 @@ import Text from "./Text.astro";
   </div>
 </section>
 
+<style>
+  /* Slide down animation for dropdown content */
+  .dropdown-content {
+    max-height: 0;
+    overflow: hidden;
+    transition:
+      max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1),
+      opacity 0.3s ease;
+    opacity: 0;
+  }
+
+  .dropdown-content.open {
+    max-height: 2000px; /* Large enough to fit content */
+    opacity: 1;
+  }
+
+  /* Smooth rotation for icon */
+  .dropdown-icon {
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Fast border radius transition - synced with content */
+  .dropdown-item {
+    transition: border-radius 0.05s ease;
+  }
+</style>
+
 <script>
   // Dropdown functionality
   document.addEventListener("DOMContentLoaded", () => {
@@ -620,16 +647,32 @@ import Text from "./Text.astro";
         const container = button.closest(".dropdown-item");
 
         if (content) {
-          content.classList.toggle("hidden");
-          icon?.classList.toggle("rotate-180");
+          const isOpen = content.classList.contains("open");
 
-          // Change border radius when dropdown is open
-          if (!content.classList.contains("hidden")) {
+          if (isOpen) {
+            // Close dropdown - start animation
+            content.classList.remove("open");
+            icon?.classList.remove("rotate-180");
+
+            // Change border back after content starts closing (small delay for smooth effect)
+            setTimeout(() => {
+              container?.classList.remove("rounded-2xl");
+              container?.classList.add("rounded-full");
+            }, 350); // Slightly before animation ends
+
+            // Wait for animation to finish before hiding
+            setTimeout(() => {
+              content.classList.add("hidden");
+            }, 400); // Match transition duration
+          } else {
+            // Open dropdown - change border immediately
             container?.classList.remove("rounded-full");
             container?.classList.add("rounded-2xl");
-          } else {
-            container?.classList.remove("rounded-2xl");
-            container?.classList.add("rounded-full");
+            content.classList.remove("hidden");
+            // Trigger reflow
+            content.offsetHeight;
+            content.classList.add("open");
+            icon?.classList.add("rotate-180");
           }
         }
       });

@@ -161,12 +161,12 @@ import Button from "./Button.astro";
         />
         <div class="flex flex-col sm:flex-row gap-3 justify-center">
           <button
-            class="cta-button bg-primary text-white font-lalezar text-xl px-5 py-2 rounded-full hover:bg-orange-600 transition-all duration-300 uppercase border-2 border-primary hover:shadow-xl hover:scale-105"
+            class="bg-primary text-white font-lalezar text-xl px-5 py-2 rounded-full hover:bg-orange-600 transition-colors duration-200 uppercase border-2 border-primary"
           >
             TILMELD DIG
           </button>
           <button
-            class="cta-button bg-transparent text-black font-lalezar text-xl px-5 py-2 rounded-full transition-all duration-300 uppercase border-2 border-black hover:shadow-xl hover:scale-105"
+            class="bg-transparent text-black font-lalezar text-xl px-5 py-2 rounded-full transition-colors duration-200 uppercase border-2 border-black"
           >
             RESERVER PLADS
           </button>
@@ -250,46 +250,6 @@ import Button from "./Button.astro";
   }
   .stripe:nth-child(19) {
     animation-delay: 900ms;
-  }
-
-  /* Button pulse animation */
-  @keyframes pulse {
-    0%,
-    100% {
-      box-shadow: 0 0 0 0 rgba(255, 89, 0, 0.7);
-    }
-    50% {
-      box-shadow: 0 0 0 10px rgba(255, 89, 0, 0);
-    }
-  }
-
-  .cta-button {
-    position: relative;
-    overflow: hidden;
-  }
-
-  .cta-button::before {
-    content: "";
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.5);
-    transform: translate(-50%, -50%);
-    transition:
-      width 0.6s,
-      height 0.6s;
-  }
-
-  .cta-button:hover::before {
-    width: 300px;
-    height: 300px;
-  }
-
-  .cta-button:active {
-    animation: pulse 0.6s;
   }
 </style>
 
