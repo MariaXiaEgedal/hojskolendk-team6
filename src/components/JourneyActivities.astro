@@ -1,0 +1,289 @@
+---
+import Text from "./Text.astro";
+import Heading from "./Heading.astro";
+---
+
+<section class="bg-white text-black font-sans py-12">
+  <div class="mx-auto max-w-6xl px-6">
+    <!-- Overskrift -->
+    <Heading
+      htmlheading="h2"
+      size="medium"
+      font="lalezar"
+      stylingclasses="text-left md:text-center max-w-[16ch] md:max-w-none"
+    >
+      En rejsehøjskole fyldt med oplevelser
+    </Heading>
+
+    <!-- Underoverskrift -->
+    <Text
+      teksttype="brødtekst"
+      stylingclasses="mt-4 text-2xl leading-snug text-left md:text-center max-w-[25ch] md:max-w-none"
+    >
+      Din højskolerejse kan blandt andet indeholde
+    </Text>
+  </div>
+
+  <!-- Mobil: horisontal scroll -->
+  <div
+    class="mt-10 -mx-6 px-6 overflow-x-auto snap-x snap-mandatory flex gap-6 md:hidden"
+  >
+    <!-- Gentag dine 5 kort her (samme markup som nedenfor) -->
+    <!-- Kort (genbruges): -->
+    <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
+      <div class="flex flex-col items-center text-center gap-4">
+        <img
+          src="img/teambuilding.webp"
+          alt="Teambuilding icon"
+          class="w-24 h-24"
+        />
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Teambuilding
+        </Heading>
+        <Text teksttype="brødtekst">
+          Rejs ud i verden med andre unge, styrk samarbejde og fællesskab.
+        </Text>
+      </div>
+    </article>
+
+    <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
+      <div class="flex flex-col items-center text-center gap-4">
+        <img
+          src="img/kulturprojekter.webp"
+          alt="Kulturprojekter icon"
+          class="w-24 h-24"
+        />
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Kulturprojekter
+        </Heading>
+        <Text teksttype="brødtekst">
+          Dyk ned i nye kulturer og deltag i projekter, hvor du kommer tæt på de
+          lokale og får ægte kulturforståelse.
+        </Text>
+      </div>
+    </article>
+
+    <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
+      <div class="flex flex-col items-center text-center gap-4">
+        <img src="img/friuger.webp" alt="" class="w-24 h-24" />
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Fridage
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Efter undervisningen får du fridage til at udforske alene, i grupper
+          eller med holdet.
+        </Text>
+      </div>
+    </article>
+
+    <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
+      <div class="flex flex-col items-center text-center gap-4">
+        <img src="img/kulturoplevelser.webp" alt="" class="w-24 h-24" />
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Kulturoplevelser
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Oplev kulturen tæt på – fra templer i Indien og surf på Hawaii til
+          teplantager i Sri Lanka og kakaofarme i Costa Rica.
+        </Text>
+      </div>
+    </article>
+
+    <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
+      <div class="flex flex-col items-center text-center gap-4">
+        <img src="img/naturoplevelser.webp" alt="" class="w-24 h-24" />
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Naturoplevelser
+        </Heading>
+        <Text teksttype="brødtekst">
+          Oplev verden med vilde naturoplevelser – fra snorkling og vandring til
+          safari og dykning i smukke omgivelser.
+        </Text>
+      </div>
+    </article>
+  </div>
+  <!-- Desktop: to rækker (skjult på mobil) -->
+  <div class="hidden md:block mt-12">
+    <!-- Række 1: 3 kolonner -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-y-12 gap-x-16">
+      <!-- Teambuilding -->
+      <article class="flex flex-col items-center text-center gap-4">
+        <div class="relative w-24 h-24 group">
+          <img
+            src="img/teambuilding.webp"
+            alt="Teambuilding"
+            class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="img/teambuildinghover.webp"
+            alt="Teambuilding hover"
+            class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </div>
+
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Teambuilding
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Rejs ud i verden med andre unge, styrk samarbejde og fællesskab.
+        </Text>
+      </article>
+
+      <!-- Kulturprojekter -->
+      <article class="flex flex-col items-center text-center gap-4">
+        <div class="relative w-24 h-24 group">
+          <img
+            src="img/kulturprojekter.webp"
+            alt="Kulturprojekter"
+            class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="img/kulturprojekterhover.webp"
+            alt="Kulturprojekter hover"
+            class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </div>
+
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Kulturprojekter
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Dyk ned i nye kulturer og deltag i projekter, hvor du kommer tæt på de
+          lokale og får ægte kulturforståelse.
+        </Text>
+      </article>
+
+      <!-- Fridage -->
+      <article class="flex flex-col items-center text-center gap-4">
+        <div class="relative w-24 h-24 group">
+          <img
+            src="img/friuger.webp"
+            alt="Fridage"
+            class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="img/friugerhover.webp"
+            alt="Fridage hover"
+            class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </div>
+
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Fridage
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Efter undervisningen får du fridage til at udforske alene, i grupper
+          eller med holdet.
+        </Text>
+      </article>
+    </div>
+
+    <!-- Række 2: 2 kolonner, centreret -->
+    <div
+      class="mt-14 grid grid-cols-1 md:grid-cols-2 gap-y-12 gap-x-24 justify-items-center max-w-4xl mx-auto"
+    >
+      <!-- Kulturoplevelser -->
+      <article class="flex flex-col items-center text-center gap-4">
+        <div class="relative w-24 h-24 group">
+          <img
+            src="img/kulturoplevelser.webp"
+            alt="Kulturoplevelser"
+            class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="img/kulturoplevelserhover.webp"
+            alt="Kulturoplevelser hover"
+            class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </div>
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Kulturoplevelser
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Oplev kulturen tæt på – fra templer i Indien og surf på Hawaii til
+          teplantager i Sri Lanka og kakaofarme i Costa Rica.
+        </Text>
+      </article>
+
+      <!-- Naturoplevelser -->
+      <article class="flex flex-col items-center text-center gap-4">
+        <div class="relative w-24 h-24 group">
+          <img
+            src="img/naturoplevelser.webp"
+            alt="Naturoplevelser"
+            class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
+          />
+          <img
+            src="img/naturoplevelserhover.webp"
+            alt="Naturoplevelser hover"
+            class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
+          />
+        </div>
+        <Heading
+          htmlheading="h3"
+          size="small"
+          font="krub"
+          stylingclasses="font-bold"
+        >
+          Naturoplevelser
+        </Heading>
+
+        <Text teksttype="brødtekst">
+          Oplev verden med vilde naturoplevelser – fra snorkling og vandring til
+          safari og dykning i smukke omgivelser.
+        </Text>
+      </article>
+    </div>
+  </div>
+</section>

@@ -1,0 +1,112 @@
+---
+import Text from "./Text.astro";
+import Heading from "./Heading.astro";
+---
+
+<section class="relative bg-white text-black py-12">
+  <!-- INDHOLD I GRID -->
+  <div class="mx-auto max-w-6xl px-6 lg:grid lg:grid-cols-12 lg:gap-x-16">
+    <!-- Venstre: tekst -->
+    <div class="lg:col-span-6">
+      <Heading htmlheading="h1" size="medium" font="underoverskrift"
+        >INFOMØDER</Heading
+      >
+      <Text teksttype="brødtekst">
+        Kig forbi et af vores hyggelige infomøder i København, Aarhus eller
+        online. <br />Vi glæder os til at møde dig!
+      </Text>
+
+      <div class="grid grid-cols-1 gap-10 lg:grid-cols-2">
+        <div>
+          <Text teksttype="fedbrødtekst" stylingclasses="mt-10 text-primary">
+            KØBENHAVN</Text
+          >
+
+          <Text teksttype="brødtekst"> 18. November 2025 // Kl. 17–19 </Text>
+        </div>
+        <div>
+          <Text teksttype="fedbrødtekst" stylingclasses="mt-10 text-primary">
+            ONLINE INFOMØDE</Text
+          >
+
+          <Text teksttype="brødtekst">
+            12. November 2025 // Kl. 17–19 <br />10. December 2025 // Kl. 17–19
+          </Text>
+        </div>
+
+        <div>
+          <Text teksttype="fedbrødtekst" stylingclasses="text-primary">
+            AARHUS</Text
+          >
+          <Text teksttype="brødtekst"> 06. November 2025 // Kl. 17–19 </Text>
+        </div>
+      </div>
+
+      <!-- CTA (MOBIL – før billederne) -->
+      <div class="mt-10 text-center lg:hidden">
+        <a
+          href="#"
+          class="inline-block border-2 border-primary text-primary font-bold
+                   px-10 py-3 rounded-full uppercase text-sm tracking-wide
+                   hover:bg-primary hover:text-white transition-colors duration-300"
+        >
+          Tilmeld infomøde
+        </a>
+      </div>
+    </div>
+
+    <!-- Højre: billeder (DESKTOP) -->
+    <div class="hidden lg:block lg:col-span-6">
+      <div class="relative h-[520px]">
+        <!-- Bageste billede -->
+        <img
+          src="img/tomænd.webp"
+          alt="To mænd ved vandet"
+          class="absolute right-52 top-2 h-[300px] w-auto drop-shadow-xl
+                   rotate-[-7deg] transition-transform duration-500 ease-out
+                   hover:rotate-[-9deg] hover:-translate-y-2"
+        />
+        <!-- Forreste billede -->
+        <img
+          src="img/topigerstrand.webp"
+          alt="To kvinder der krammer på stranden"
+          class="absolute right-2 top-40 h-[300px] w-auto drop-shadow-xl z-10
+                   rotate-[4deg] transition-transform duration-500 ease-out
+                   hover:rotate-[8deg] hover:-translate-y-2"
+        />
+      </div>
+    </div>
+
+    <!-- Billeder (mobil/tablet, uden hover) -->
+    <div class="mt-12 lg:hidden col-span-full">
+      <div class="relative mx-auto w-[320px] sm:w-[380px] h-[460px]">
+        <!-- Bageste (mændene - længere mod venstre) -->
+        <img
+          src="img/tomænd.webp"
+          alt="To mænd ved vandet"
+          class="absolute top-0 left-1/2 -translate-x-[85%] sm:-translate-x-[88%]
+                   h-60 sm:h-64 w-auto drop-shadow-xl rotate-[-6deg]"
+        />
+        <!-- Forreste (pigerne - længere mod højre) -->
+        <img
+          src="img/topigerstrand.webp"
+          alt="To kvinder der krammer på stranden"
+          class="absolute top-28 left-1/2 -translate-x-[10%] sm:-translate-x-[8%]
+                   h-60 sm:h-64 w-auto drop-shadow-xl rotate-[8deg] z-10"
+        />
+      </div>
+    </div>
+  </div>
+
+  <!-- CTA (DESKTOP – overlay, centreret midt på siden og lidt højere oppe) -->
+  <div class="hidden lg:flex absolute left-1/2 -translate-x-1/2 bottom-20">
+    <a
+      href="#"
+      class="inline-block border-2 border-primary text-primary font-bold
+               px-10 py-3 rounded-full uppercase tracking-wide
+               hover:bg-primary hover:text-white transition-colors duration-300"
+    >
+      Tilmeld infomøde
+    </a>
+  </div>
+</section>
