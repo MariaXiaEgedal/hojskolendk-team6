@@ -3,8 +3,8 @@ import Text from "./Text.astro";
 import Heading from "./Heading.astro";
 ---
 
-<section class="bg-white text-black font-sans py-12">
-  <div class="mx-auto max-w-6xl px-6">
+<section class="bg-white text-black font-sans py-12 mx-5 md:mx-[130px]">
+  <div class="mx-auto max-w-6xl">
     <!-- Overskrift -->
     <Heading
       htmlheading="h2"
@@ -25,15 +25,13 @@ import Heading from "./Heading.astro";
   </div>
 
   <!-- Mobil: horisontal scroll -->
-  <div
-    class="mt-10 -mx-6 px-6 overflow-x-auto snap-x snap-mandatory flex gap-6 md:hidden"
-  >
+  <div class="mt-10 overflow-x-auto snap-x snap-mandatory flex gap-6 md:hidden">
     <!-- Gentag dine 5 kort her (samme markup som nedenfor) -->
     <!-- Kort (genbruges): -->
     <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
       <div class="flex flex-col items-center text-center gap-4">
         <img
-          src="img/teambuilding.webp"
+          src="img/teambuilding.svg"
           alt="Teambuilding icon"
           class="w-24 h-24"
         />
@@ -54,7 +52,7 @@ import Heading from "./Heading.astro";
     <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
       <div class="flex flex-col items-center text-center gap-4">
         <img
-          src="img/kulturprojekter.webp"
+          src="img/kulturprojekter.svg"
           alt="Kulturprojekter icon"
           class="w-24 h-24"
         />
@@ -75,7 +73,7 @@ import Heading from "./Heading.astro";
 
     <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
       <div class="flex flex-col items-center text-center gap-4">
-        <img src="img/friuger.webp" alt="" class="w-24 h-24" />
+        <img src="img/friuger.svg" alt="" class="w-24 h-24" />
         <Heading
           htmlheading="h3"
           size="small"
@@ -94,7 +92,7 @@ import Heading from "./Heading.astro";
 
     <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
       <div class="flex flex-col items-center text-center gap-4">
-        <img src="img/kulturoplevelser.webp" alt="" class="w-24 h-24" />
+        <img src="img/kulturoplevelser.svg" alt="" class="w-24 h-24" />
         <Heading
           htmlheading="h3"
           size="small"
@@ -113,7 +111,7 @@ import Heading from "./Heading.astro";
 
     <article class="min-w-[80%] snap-center bg-white rounded-xl p-6">
       <div class="flex flex-col items-center text-center gap-4">
-        <img src="img/naturoplevelser.webp" alt="" class="w-24 h-24" />
+        <img src="img/naturoplevelser.svg" alt="" class="w-24 h-24" />
         <Heading
           htmlheading="h3"
           size="small"
@@ -137,12 +135,12 @@ import Heading from "./Heading.astro";
       <article class="flex flex-col items-center text-center gap-4">
         <div class="relative w-24 h-24 group">
           <img
-            src="img/teambuilding.webp"
+            src="img/teambuilding.svg"
             alt="Teambuilding"
             class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
           />
           <img
-            src="img/teambuildinghover.webp"
+            src="img/teambuildinghover.svg"
             alt="Teambuilding hover"
             class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
@@ -166,12 +164,12 @@ import Heading from "./Heading.astro";
       <article class="flex flex-col items-center text-center gap-4">
         <div class="relative w-24 h-24 group">
           <img
-            src="img/kulturprojekter.webp"
+            src="img/kulturprojekter.svg"
             alt="Kulturprojekter"
             class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
           />
           <img
-            src="img/kulturprojekterhover.webp"
+            src="img/kulturprojekterhover.svg"
             alt="Kulturprojekter hover"
             class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
@@ -196,12 +194,12 @@ import Heading from "./Heading.astro";
       <article class="flex flex-col items-center text-center gap-4">
         <div class="relative w-24 h-24 group">
           <img
-            src="img/friuger.webp"
+            src="img/friuger.svg"
             alt="Fridage"
             class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
           />
           <img
-            src="img/friugerhover.webp"
+            src="img/friugerhover.svg"
             alt="Fridage hover"
             class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
@@ -231,12 +229,12 @@ import Heading from "./Heading.astro";
       <article class="flex flex-col items-center text-center gap-4">
         <div class="relative w-24 h-24 group">
           <img
-            src="img/kulturoplevelser.webp"
+            src="img/kulturoplevelser.svg"
             alt="Kulturoplevelser"
             class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
           />
           <img
-            src="img/kulturoplevelserhover.webp"
+            src="img/kulturoplevelserhover.svg"
             alt="Kulturoplevelser hover"
             class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
@@ -260,12 +258,12 @@ import Heading from "./Heading.astro";
       <article class="flex flex-col items-center text-center gap-4">
         <div class="relative w-24 h-24 group">
           <img
-            src="img/naturoplevelser.webp"
+            src="img/naturoplevelser.svg"
             alt="Naturoplevelser"
             class="absolute inset-0 w-full h-full object-contain transition-opacity duration-300 group-hover:opacity-0"
           />
           <img
-            src="img/naturoplevelserhover.webp"
+            src="img/naturoplevelserhover.svg"
             alt="Naturoplevelser hover"
             class="absolute inset-0 w-full h-full object-contain opacity-0 transition-opacity duration-300 group-hover:opacity-100"
           />
