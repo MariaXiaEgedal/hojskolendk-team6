@@ -5,8 +5,6 @@ import DatesPrices from "../components/DatesPrices.astro";
 import TripProgram from "../components/TripProgram.astro";
 import WhatsIncluded from "../components/WhatsIncluded.astro";
 import Sustainability from "../components/Sustainability.astro";
-import Heading from "../components/Heading.astro";
-import GifSection from "../components/GifSection.astro";
 ---
 
 <MainLayout title="Single View">
@@ -53,9 +51,7 @@ import GifSection from "../components/GifSection.astro";
     <DatesPrices />
   </section>
   <!-- /*************************************************/ GIF SECTION /*************************************************/ -->
-  <div class="animate-section opacity-0" data-animation="scale">
-    <GifSection gifSrc="/img/flyrute1.gif" altText="fly gif" zIndex="-1000" />
-  </div>
+  <img src="/img/flyrute1.gif" alt="Flyrute" />
 
   <!-- /*************************************************/ TRIP PROGRAM /*************************************************/ -->
   <section
